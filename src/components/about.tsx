@@ -3,7 +3,7 @@ import Hero from "./hero";
 export default function About() {
   return (
     <section
-      className="flex items-start z-14 justify-center px-36 pt-14 gap-10 my-10 pb-36 bg-white dark:text-black"
+      className="container flex items-start z-14 justify-center md:px-36 pt-14 gap-10 pb-36"
       id="about"
     >
       <h2 dir="rtl" className="font-bold text-xl">
