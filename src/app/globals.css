@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Helvetica LT Std Light";
+  src: url("../../public/assets/fonts/Helvetica\ LT\ Std\ Light.otf");
+}
+
+@font-face {
+  font-family: "Helvetica LT Std Bold";
+  src: url("../../public/assets/fonts/Helvetica\ LT\ Std\ Bold.otf");
+}
