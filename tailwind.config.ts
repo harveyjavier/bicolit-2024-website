@@ -15,6 +15,10 @@ const config: Config = {
         },
       },
     },
+    fontFamily: {
+      helvetica_light: ["Helvetica LT Std Light", "sans-serif"],
+      helvetica_bold: ["Helvetica LT Std Bold", "sans-serif"],
+    },
   },
   plugins: [],
 };
