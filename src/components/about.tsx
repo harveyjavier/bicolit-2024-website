@@ -1,5 +1,3 @@
-import Hero from "./hero";
-
 export default function About() {
   return (
     <section
@@ -7,8 +5,8 @@ export default function About() {
       id="about"
     >
       <h2 dir="rtl" className="font-bold text-xl">
-        We're the biggest and most active IT education advocacy organization in
-        the Bicol region with 5k+ members
+        We&lsquo;re the biggest and most active IT education advocacy
+        organization in the Bicol region with 5k+ members
       </h2>
       <div className="flex item-center text-sm flex-col justify-center gap-4 flex-wrap">
         <p>
