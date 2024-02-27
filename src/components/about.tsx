@@ -15,12 +15,12 @@ export default function About() {
           academics.
         </p>
         <p>
-          We've conducted dozens of seminars, meetups, and workshops on various
+          We&apos;ve conducted dozens of seminars, meetups, and workshops on various
           technologies that have attracted thousands of participants from all
           over Bicol.
         </p>
         <p>
-          Our events always feature experts from the industry. We're grateful
+          Our events always feature experts from the industry. We&apos;re grateful
           for their continuous support in sharing their knowledge with our
           members.
         </p>
