@@ -10,23 +10,23 @@ export default function About() {
       </h2>
       <div className="flex item-center text-sm flex-col justify-center gap-4 flex-wrap">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat.
+          From its inception in 2013, our community has grown from a few
+          enthusiasts to thousands of students, professionals, founders, and
+          academics.
         </p>
         <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
+          We've conducted dozens of seminars, meetups, and workshops on various
+          technologies that have attracted thousands of participants from all
+          over Bicol.
+        </p>
+        <p>
+          Our events always feature experts from the industry. We're grateful
+          for their continuous support in sharing their knowledge with our
+          members.
+        </p>
+        <p>
+          BICOLIT.ORG INC. is a duly registered nonprofit corporation under SEC,
+          BIR, LGU, and other government institutions.
         </p>
       </div>
     </section>
