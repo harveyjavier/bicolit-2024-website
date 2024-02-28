@@ -11,3 +11,7 @@
   font-family: "Helvetica LT Std Bold";
   src: url("../../public/assets/fonts/bold.otf");
 }
+
+body {
+  font-family: "Helvetica LT Std Light";
+}
