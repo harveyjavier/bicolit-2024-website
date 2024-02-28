@@ -1,7 +1,10 @@
+import Image from "next/image";
+import graphic_2 from "../../public/assets/graphic_2.png";
+
 export default function About() {
   return (
     <section
-      className="container flex items-start z-14 justify-center md:px-36 pt-14 gap-10 pb-36"
+      className="relative -z-10 container h-full md:h-screen flex items-start justify-center md:px-36 pt-14 gap-10 pb-36"
       id="about"
     >
       <h2 dir="rtl" className="font-bold text-xl">
@@ -15,20 +18,28 @@ export default function About() {
           academics.
         </p>
         <p>
-          We&apos;ve conducted dozens of seminars, meetups, and workshops on various
-          technologies that have attracted thousands of participants from all
-          over Bicol.
+          We&apos;ve conducted dozens of seminars, meetups, and workshops on
+          various technologies that have attracted thousands of participants
+          from all over Bicol.
         </p>
         <p>
-          Our events always feature experts from the industry. We&apos;re grateful
-          for their continuous support in sharing their knowledge with our
-          members.
+          Our events always feature experts from the industry. We&apos;re
+          grateful for their continuous support in sharing their knowledge with
+          our members.
         </p>
         <p>
           BICOLIT.ORG INC. is a duly registered nonprofit corporation under SEC,
           BIR, LGU, and other government institutions.
         </p>
       </div>
+      <Image
+        className="absolute left-0 bottom-0 h-fit z-[-5]"
+        src={graphic_2}
+        alt="Nice Graphic"
+        height={400}
+        width={400}
+        priority
+      />
     </section>
   );
 }
