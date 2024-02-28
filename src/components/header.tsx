@@ -30,8 +30,8 @@ export default function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
-  const headerClass = `flex z-20 sticky top-0 justify-between items-center transition-all flex-row w-full ${
-    scrolled ? "backdrop-blur-lg px-2 top-4 rounded-full" : "bg-none"
+  const headerClass = `flex z-20 p-4 sticky top-0 justify-between items-center transition-all flex-row w-full ${
+    scrolled ? "backdrop-blur-lg top-4 rounded-full" : "bg-none"
   }`;
 
   const drawerButtonClass = `h-6 w-6 transition-transform transform ${
@@ -42,10 +42,10 @@ export default function Header() {
     <div className={headerClass}>
       <Link href="#home">
         <Image
-          src={siteConfig.ogImage}
+          src={siteConfig.logo}
           alt="Bicol IT Logo"
-          height={scrolled ? 50 : 70}
-          width={scrolled ? 50 : 70}
+          height={scrolled ? 65 : 80}
+          width={scrolled ? 65 : 80}
           priority
         />
       </Link>
