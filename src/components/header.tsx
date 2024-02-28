@@ -30,22 +30,22 @@ export default function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
-  const headerClass = `flex z-20 p-4 sticky top-0 justify-between items-center transition-all flex-row w-full ${
+  const headerClass = `container fixed top-0 left-0 right-0 flex z-20 md:p-4 w-full fixed top-4 justify-between items-center transition-all flex-row ${
     scrolled ? "backdrop-blur-lg top-4 rounded-full" : "bg-none"
-  }`;
+  } `;
 
   const drawerButtonClass = `h-6 w-6 transition-transform transform ${
     isDrawerOpen ? "rotate-90" : "rotate-0"
   }`;
 
   return (
-    <div className={headerClass}>
+    <header className={headerClass}>
       <Link href="#home">
         <Image
           src={siteConfig.logo}
           alt="Bicol IT Logo"
-          height={scrolled ? 65 : 80}
-          width={scrolled ? 65 : 80}
+          height={79}
+          width={79}
           priority
         />
       </Link>
@@ -114,9 +114,9 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {isDrawerOpen && (
-        <div className="md:hidden absolute backdrop-blur-lg transition-all rounded-b-lg w-full h-fit top-16 left-0">
+        <div className="md:hidden fixed backdrop-blur-lg transition-all rounded-b-lg w-full h-fit top-16 left-0">
           {/* Render your navigation links here */}
-          <div className="flex flex-col items-center w-full h-fit ">
+          <div className="flex flex-col items-center w-full h-fit">
             {siteConfig.links.map((link) => (
               <Link
                 onClick={() => setDrawerOpen(false)}
@@ -130,6 +130,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </div>
+    </header>
   );
 }
