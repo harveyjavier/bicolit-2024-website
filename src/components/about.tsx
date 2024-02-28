@@ -7,9 +7,12 @@ export default function About() {
       className="relative -z-10 container h-full md:h-screen flex items-start justify-center md:px-36 pt-14 gap-10 pb-36"
       id="about"
     >
-      <h2 dir="rtl" className="font-bold text-xl">
-        We&lsquo;re the biggest and most active IT education advocacy
-        organization in the Bicol region with 5k+ members
+      <h2 dir="rtl" className="font-bold text-xl leading-[28pt] ">
+        We&lsquo;re the biggest and most
+        <br /> active IT education advocacy organization in the Bicol region
+        with 5k&#43;
+        <br />
+        members
       </h2>
       <div className="flex item-center text-sm flex-col justify-center gap-4 flex-wrap">
         <p>
