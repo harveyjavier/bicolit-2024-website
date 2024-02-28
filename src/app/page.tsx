@@ -7,7 +7,7 @@ import Membership from "@/components/membership";
 export default function Home() {
   return (
     <main>
-      <section className="container relative flex items-start justify-between flex-col h-svh md:h-screen bg-gradient-to-tl to-[#00C2FF] via-[45.814%] via-[#6633C2] from-[#330066] pb-5">
+      <section className="container relative flex  flex-col md:h-[50rem] h-svh bg-gradient-to-tl to-[#00C2FF] via-[60%] via-[#6633C2] from-[#330066]">
         <Header />
         <Hero />
       </section>
