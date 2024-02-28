@@ -11,7 +11,7 @@ export default function Hero() {
         width={500}
         priority
       />
-      <div className="absolute bottom-0 flex z-10 md:px-20 items-start justify-start md:items-end md:justify-center flex-col-reverse md:flex-row-reverse">
+      <div className="absolute bottom-0 flex z-10 md:px-14 items-start justify-start md:items-end md:justify-center flex-col-reverse md:flex-row-reverse">
         <Image
           className="h-min w-50 align-bottom"
           src="/assets/vr-girl.png"
