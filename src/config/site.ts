@@ -1,7 +1,9 @@
+import logo from "../../public/assets/logo.svg";
+
 export const siteConfig = {
   name: "Bicol IT",
   url: "https://bicolit.org",
-  ogImage: "https://bicolit.org/images/bicolit-logo.png",
+  ogImage: logo,
   description:
     "Transforming Bicol into a globally competitive Information Technology hub through Education and Technopreneurship.",
   links: [
