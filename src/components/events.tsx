@@ -10,7 +10,7 @@ export default function Events() {
     >
       <div className="flex items-start justify-center flex-col gap-4 h-full">
         <h2 className="font-helvetica_bold text-lg font-extrabold">Events</h2>
-        <div className="flex flex-col text-8xl md:text-[204.1pt] font-helvetica_bold  font-bold leading-[0.65]">
+        <div className="flex flex-col text-8xl  z-[2] md:text-[204.1pt] font-helvetica_bold  font-bold leading-[0.65]">
           <span>
             BIT
             <br />
@@ -30,11 +30,11 @@ export default function Events() {
 
       <div className="absolute inset-0 flex items-end justify-center">
         <Image
-          className="h-fit"
+          className="h-min"
           src={graphic_4}
           alt="Nice Graphic"
           objectFit="contain"
-          layout="fill"
+          fill
           priority
         />
       </div>
