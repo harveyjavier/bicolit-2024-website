@@ -11,19 +11,25 @@ export default function Hero() {
         width={500}
         priority
       />
-      <div className="absolute bottom-0 flex z-10 md:px-14 items-start justify-start md:items-end md:justify-center flex-col-reverse md:flex-row-reverse">
-        <Image
-          className="h-min w-50 align-bottom"
-          src="/assets/vr-girl.png"
-          alt="A Girl in a VR Headset"
-          height={620}
-          width={620}
-          priority
-        />
-        <div className="text-white md:translate-x-10 md:pb-20 font-helvetica_bold text-5xl md:text-6xl lg:text-9xl font-bold">
-          <span className="block">Innovating</span>
-          <span className="block">Tomorrow,</span>
-          <span className="block">Today.</span>
+      <div className="grow flex items-start sm:flex-row justify-start z-[1] md:items-end md:justify-end flex-col h-full">
+        <div className="flex items-end md:items-center h-full">
+          <span className="text-white md:translate-x-16 font-helvetica_bold text-5xl md:text-6xl lg:text-9xl font-bold">
+            Innovating
+            <br />
+            Tomorrow,
+            <br />
+            Today.
+            <br />
+          </span>
+        </div>
+        <div className="flex items-end justify-end  h-full">
+          <Image
+            src="/assets/vr-girl.png"
+            alt="A Girl in a VR Headset"
+            height={680}
+            width={680}
+            priority
+          />
         </div>
       </div>
     </>
