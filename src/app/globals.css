@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: "Helvetica LT Std Light";
-  src: url("../../public/assets/fonts/Helvetica\ LT\ Std\ Light.otf");
+  src: url("../../public/assets/fonts/light.otf");
 }
 
 @font-face {
   font-family: "Helvetica LT Std Bold";
-  src: url("../../public/assets/fonts/Helvetica\ LT\ Std\ Bold.otf");
+  src: url("../../public/assets/fonts/bold.otf");
 }
