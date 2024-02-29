@@ -1,5 +1,5 @@
 import logo from "../../public/assets/logo.svg";
-import ogImage from "../../public/assets/og.png";
+import ogImage from "../../public/og.png";
 import one from "../../public/assets/advocates/1.png";
 import two from "../../public/assets/advocates/2.png";
 import three from "../../public/assets/advocates/3.png";
