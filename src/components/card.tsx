@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
-import Title from "@/components/title";
+import CardTitle from "@/components/card-title";
 
 type CardProps = {
   imageSource: any;
@@ -35,7 +35,7 @@ const Card: React.FC<CardProps> = ({
         {imgGradient && <div className={`absolute ${imgGradient}`} />}
       </div>
       <div className={contentStyle}>
-        <Title>{title}</Title>
+        <CardTitle>{title}</CardTitle>
         <p className="text-sm">{description}</p>
       </div>
     </div>
