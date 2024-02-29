@@ -3,6 +3,8 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Events from "@/components/events";
 import Membership from "@/components/membership";
+import Blogs from "@/components/blogs";
+import Advocates from "@/components/advocates";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <About />
       <Events />
       <Membership />
+      <Blogs />
+      <Advocates />
     </main>
   );
 }
