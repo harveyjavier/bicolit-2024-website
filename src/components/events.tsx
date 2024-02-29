@@ -5,12 +5,14 @@ import graphic_5 from "../../public/assets/graphic_5.svg";
 export default function Events() {
   return (
     <section
-      className="relative container h-svh md:h-[1086px] bg-[#330066] md:pl-24 text-white "
+      className="container relative h-svh md:h-[1086px] bg-[#330066] md:p-24 text-white"
       id="events"
     >
-      <div className="flex items-start justify-center flex-col gap-4 h-full">
-        <h2 className="font-helvetica_bold text-lg font-extrabold">Events</h2>
-        <div className="flex flex-col text-8xl  z-[2] md:text-[204.1pt] font-helvetica_bold  font-bold leading-[0.65]">
+      <div className="flex justify-center flex-col gap-4 h-full">
+        <h2 className="font-helvetica_bold text-2xl font-extrabold text-white">
+          Events
+        </h2>
+        <div className="flex flex-col text-8xl z-[2] md:text-[204.1pt] font-helvetica_bold  font-bold leading-[0.75]">
           <span>
             BIT
             <br />
@@ -28,16 +30,16 @@ export default function Events() {
         />
       </div>
 
-      <div className="absolute inset-0 flex items-end justify-center">
-        <Image
-          className="h-min"
-          src={graphic_4}
-          alt="Nice Graphic"
-          objectFit="contain"
-          fill
-          priority
-        />
-      </div>
+      <Image
+        className="absolute left-0 bottom-0 h-fit"
+        src={graphic_4}
+        alt="Nice Graphic"
+        priority
+        style={{
+          width: "100%",
+          height: "916.198",
+        }}
+      />
     </section>
   );
 }
