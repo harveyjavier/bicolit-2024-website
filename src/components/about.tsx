@@ -1,5 +1,5 @@
 import Image from "next/image";
-import graphic_2 from "../../public/assets/graphic_2.png";
+import graphicTwo from "../../public/assets/about/graphic_2.svg";
 
 export default function About() {
   return (
@@ -35,11 +35,10 @@ export default function About() {
       </div>
       <Image
         className="absolute left-0 bottom-0 h-fit z-[-5]"
-        src={graphic_2}
+        src={graphicTwo}
         alt="Nice Graphic"
         height={400}
         width={400}
-        priority
       />
     </section>
   );
