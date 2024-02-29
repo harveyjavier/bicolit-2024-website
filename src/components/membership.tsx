@@ -1,28 +1,6 @@
 import Input from "@/components/input";
+import { siteConfig } from "@/config/site";
 import { toast } from "sonner";
-
-const formDetails = [
-  {
-    placeholder: "First Name",
-    type: "text",
-    name: "first_name",
-  },
-  {
-    placeholder: "Last Name",
-    type: "text",
-    name: "last_name",
-  },
-  {
-    placeholder: "Email Address",
-    type: "email",
-    name: "email",
-  },
-  {
-    placeholder: "Mobile Number",
-    type: "tel",
-    name: "mobile_number",
-  },
-];
 
 export default function Membership() {
   const submitEmail = async (formData: FormData) => {
@@ -39,7 +17,7 @@ export default function Membership() {
 
   return (
     <section
-      className="container flex items-center justify-center flex-col h-svh md:h-screen bg-white"
+      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-svh md:h-[40rem] bg-white"
       id="membership"
     >
       <div className="flex items-center justify-center flex-col ">
@@ -56,7 +34,7 @@ export default function Membership() {
           action={submitEmail}
           className="grid place-content-center place-items-center grid-cols-2 grid-rows-4 gap-4 w-full md:px-16 p-2"
         >
-          {formDetails.map((formDetail, index) => {
+          {siteConfig.formDetails.map((formDetail, index) => {
             return (
               <Input
                 name={formDetail.name}
