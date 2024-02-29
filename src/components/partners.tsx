@@ -45,9 +45,12 @@ export default function Partners() {
           </span>
           <div className="flex items-start justify-between flex-col gap-10">
             <div className="space-y-6">
-              {siteConfig.contacts.info.map((contact) => {
+              {siteConfig.contacts.info.map((contact, index) => {
                 return (
-                  <div className="flex items-start justify-between w-full h-full text-sm">
+                  <div
+                    key={index}
+                    className="flex items-start justify-between w-full h-full text-sm"
+                  >
                     <span>{contact.key}:</span>
                     <span className="text-right">{contact.value}</span>
                   </div>
@@ -55,9 +58,9 @@ export default function Partners() {
               })}
             </div>
             <div className="flex items-center justify-center md:items-start md:justify-start gap-6 w-full">
-              {siteConfig.contacts.links.map((link) => {
+              {siteConfig.contacts.links.map((link, index) => {
                 return (
-                  <a href={link.url} target="_blank">
+                  <a key={index} href={link.url} target="_blank">
                     <Image
                       className="hover:fill-[#00CCFF]"
                       src={link.logo}
