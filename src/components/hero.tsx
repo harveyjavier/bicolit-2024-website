@@ -9,8 +9,8 @@ export default function Hero() {
         className="absolute top-0 right-0 h-fit"
         src={graphicOne}
         alt="Nice Graphic"
-        height={500}
-        width={500}
+        height={650}
+        width={650}
         priority
       />
       <div className="grow flex items-start sm:flex-row justify-start z-[1] md:items-end md:justify-end flex-col h-full">
@@ -28,8 +28,8 @@ export default function Hero() {
           <Image
             src={vrGirl}
             alt="A girl in a virtual reality headset"
-            width={733}
-            height={733}
+            width={700}
+            height={700}
             priority
           />
         </div>
