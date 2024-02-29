@@ -1,5 +1,11 @@
 import logo from "../../public/assets/logo.svg";
 import ogImage from "../../public/assets/og.png";
+import one from "../../public/assets/advocates/1.png";
+import two from "../../public/assets/advocates/2.png";
+import three from "../../public/assets/advocates/3.png";
+import four from "../../public/assets/advocates/4.png";
+import five from "../../public/assets/advocates/5.png";
+import six from "../../public/assets/advocates/6.png";
 
 export const siteConfig = {
   name: "Bicol IT",
@@ -33,6 +39,44 @@ export const siteConfig = {
     {
       title: "Partners",
       href: "#partners",
+    },
+  ],
+  advocates: [
+    {
+      imageSource: one,
+      name: "Ismael Jerusalem",
+      linkedin: "",
+      position: "President",
+    },
+    {
+      imageSource: two,
+      name: "Will Añonuevo",
+      linkedin: "",
+      position: "Head of Creatives",
+    },
+    {
+      imageSource: three,
+      name: "Harvey Havier",
+      linkedin: "",
+      position: "Head of Technology",
+    },
+    {
+      imageSource: four,
+      name: "Harris Osianna",
+      linkedin: "",
+      position: "Head of Partnership and Relations",
+    },
+    {
+      imageSource: five,
+      name: "Felix Oliver Zuñiga",
+      linkedin: "",
+      position: "Finance Officer",
+    },
+    {
+      imageSource: six,
+      name: "Kenneth Aycardo",
+      linkedin: "",
+      position: "Student Council President",
     },
   ],
 };
