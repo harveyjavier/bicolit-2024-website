@@ -4,15 +4,13 @@ import graphic_2 from "../../public/assets/graphic_2.png";
 export default function About() {
   return (
     <section
-      className="relative -z-10 container h-full md:h-screen flex items-start justify-center md:px-36 pt-14 gap-10 pb-36"
+      className="relative -z-10 container h-full md:h-[50rem] flex items-start justify-center md:px-36 pt-14 gap-10 pb-36 bg-white text-black"
       id="about"
     >
-      <h2 dir="rtl" className="font-bold text-xl leading-[28pt] ">
+      <h2 dir="rtl" className="font-bold text-xl leading-5 ">
         We&lsquo;re the biggest and most
         <br /> active IT education advocacy organization in the Bicol region
-        with 5k&#43;
-        <br />
-        members
+        with 5k&#43; members
       </h2>
       <div className="flex item-center text-sm flex-col justify-center gap-4 flex-wrap">
         <p>
