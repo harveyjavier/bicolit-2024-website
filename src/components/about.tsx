@@ -39,7 +39,6 @@ export default function About() {
         alt="Nice Graphic"
         height={400}
         width={400}
-        priority
       />
     </section>
   );
