@@ -12,15 +12,15 @@ export default function Advocates() {
       <h1 className="font-helvetica_bold text-2xl font-extrabold text-[#330066]">
         Advocates
       </h1>
-      <div className="flex flex-wrap items-center justify-between">
+      <div className="flex flex-wrap items-center justify-center lg:justify-between gap-4">
         {siteConfig.advocates.map((advocate, index) => {
           return (
             <Card
               key={index}
-              cardClass="even:my-4"
-              imageWidth={348}
-              imageHeight={348}
+              cardClass="even:my-4 hover:cursor-pointer]"
               imageSource={advocate.imageSource}
+              imageWidth={333}
+              imageHeight={333}
               title={
                 <AdvocateTitle
                   title={advocate.name}
