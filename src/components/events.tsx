@@ -5,7 +5,7 @@ import graphicFive from "../../public/assets/events/graphic_5.svg";
 export default function Events() {
   return (
     <section
-      className="container relative h-svh md:h-[1086px] bg-[#330066] md:p-24 text-white"
+      className="container relative h-svh md:h-[68rem] bg-[#330066] md:p-24 text-white"
       id="events"
     >
       <div className="flex justify-center flex-col gap-4 h-full">
