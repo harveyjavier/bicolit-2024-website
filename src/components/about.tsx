@@ -4,7 +4,7 @@ import graphic_2 from "../../public/assets/graphic_2.png";
 export default function About() {
   return (
     <section
-      className="relative -z-10 container h-full md:h-[50rem] flex items-start justify-center md:px-36 pt-14 gap-10 pb-36 bg-white text-black"
+      className="relative -z-10 container h-full md:h-[50rem] flex items-start justify-center md:px-36 pt-14 gap-10 pb-36"
       id="about"
     >
       <h2 dir="rtl" className="font-bold text-xl leading-5 ">
