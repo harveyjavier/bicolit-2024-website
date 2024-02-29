@@ -30,7 +30,7 @@ export default function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
-  const headerClass = `container fixed top-0 left-0 right-0 flex z-20 md:p-4 w-full fixed top-4 justify-between items-center transition-all flex-row ${
+  const headerClass = `container sticky top-4 left-0 right-0 flex z-20 w-full justify-between items-center transition-all flex-row  ${
     scrolled ? "backdrop-blur-lg top-4 rounded-full" : "bg-none"
   } `;
 
@@ -114,7 +114,7 @@ export default function Header() {
 
       {/* Mobile drawer */}
       {isDrawerOpen && (
-        <div className="md:hidden fixed backdrop-blur-lg transition-all rounded-b-lg w-full h-fit top-16 left-0">
+        <div className="md:hidden fixed backdrop-blur-lg transition-all rounded-b-lg w-full h-fit top-14 left-0">
           {/* Render your navigation links here */}
           <div className="flex flex-col items-center w-full h-fit">
             {siteConfig.links.map((link) => (
