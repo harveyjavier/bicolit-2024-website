@@ -13,9 +13,9 @@ export default function Hero() {
         width={650}
         priority
       />
-      <div className="grow flex items-start sm:flex-row justify-start z-[1] md:items-end md:justify-end flex-col h-full">
+      <div className="grow flex items-start sm:flex-row z-[1] md:items-end md:justify-end flex-col h-full">
         <div className="flex items-end md:items-center h-full">
-          <span className="text-white md:translate-x-16 font-helvetica_bold text-5xl md:text-6xl lg:text-9xl font-bold">
+          <span className="text-white md:translate-x-16 font-helvetica_bold text-5xl md:text-6xl lg:text-[7.5rem] leading-[1] font-bold">
             Innovating
             <br />
             Tomorrow,
@@ -24,12 +24,12 @@ export default function Hero() {
             <br />
           </span>
         </div>
-        <div className="flex items-end justify-end  h-full">
+        <div className="flex items-end justify-end h-full">
           <Image
             src={vrGirl}
             alt="A girl in a virtual reality headset"
-            width={700}
-            height={700}
+            width={733}
+            height={733}
             priority
           />
         </div>
