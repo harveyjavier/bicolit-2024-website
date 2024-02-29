@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
-import { ThemeProvider } from "@/components/theme-provider";
-const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
 };
 
 export default function RootLayout({
@@ -17,15 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body>
+        <Toaster />
+        {children}
       </body>
     </html>
   );
