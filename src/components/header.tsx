@@ -100,7 +100,7 @@ export default function Header() {
       </div>
 
       {/* Navigation links */}
-      <div className="items-center justify-between gap-10 hidden md:flex">
+      <div className="items-center justify-between md:gap-6 lg:gap-10 hidden md:flex">
         {siteConfig.links.map((link) => (
           <Link
             href={link.href}
