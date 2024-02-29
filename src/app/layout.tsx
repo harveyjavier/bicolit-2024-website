@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: ["./../public/assets/og.png"],
+    images: "og.png",
   },
 };
 
