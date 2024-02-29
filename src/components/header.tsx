@@ -30,7 +30,7 @@ export default function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
-  const headerClass = `container sticky top-4 left-0 right-0 flex z-20 w-full justify-between items-center transition-all flex-row  ${
+  const headerClass = `md:container sticky top-4 left-0 right-0 flex z-20 w-full justify-between items-center transition-all flex-row  ${
     scrolled ? "backdrop-blur-lg top-4 rounded-full" : "bg-none"
   } `;
 

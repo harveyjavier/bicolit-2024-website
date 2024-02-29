@@ -1,11 +1,13 @@
 import Image from "next/image";
+import vrGirl from "../../public/assets/hero/vr-girl.png";
+import graphicOne from "../../public/assets/hero/graphic_1.svg";
 
 export default function Hero() {
   return (
     <>
       <Image
         className="absolute top-0 right-0 h-fit"
-        src="/assets/graphic_1.png"
+        src={graphicOne}
         alt="Nice Graphic"
         height={500}
         width={500}
@@ -24,10 +26,10 @@ export default function Hero() {
         </div>
         <div className="flex items-end justify-end  h-full">
           <Image
-            src="/assets/vr-girl.png"
-            alt="A Girl in a VR Headset"
-            height={680}
-            width={680}
+            src={vrGirl}
+            alt="A girl in a virtual reality headset"
+            width={733}
+            height={733}
             priority
           />
         </div>

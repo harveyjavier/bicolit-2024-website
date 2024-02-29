@@ -45,19 +45,19 @@ export const siteConfig = {
     {
       imageSource: one,
       name: "Ismael Jerusalem",
-      linkedin: "",
+      linkedin: "https://ph.linkedin.com/in/ismaeljerusalem",
       position: "President",
     },
     {
       imageSource: two,
       name: "Will Añonuevo",
-      linkedin: "",
+      linkedin: "https://ph.linkedin.com/in/williamanonuevo",
       position: "Head of Creatives",
     },
     {
       imageSource: three,
       name: "Harvey Havier",
-      linkedin: "",
+      linkedin: "https://ph.linkedin.com/in/harveyjavier",
       position: "Head of Technology",
     },
     {

@@ -1,7 +1,7 @@
 import Card from "@/components/card";
 import { siteConfig } from "@/config/site";
 import AdvocateTitle from "./advocate-title";
-import linkedin from "../../public/assets/linkedin.svg";
+import linkedinIcon from "../../public/assets/linkedin.svg";
 
 export default function Advocates() {
   return (
@@ -21,7 +21,13 @@ export default function Advocates() {
               imageWidth={348}
               imageHeight={348}
               imageSource={advocate.imageSource}
-              title={<AdvocateTitle title={advocate.name} icon={linkedin} />}
+              title={
+                <AdvocateTitle
+                  title={advocate.name}
+                  url={advocate.linkedin}
+                  icon={linkedinIcon}
+                />
+              }
               description={advocate.position}
             />
           );

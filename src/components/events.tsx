@@ -1,6 +1,6 @@
 import Image from "next/image";
-import graphic_4 from "../../public/assets/graphic_4.svg";
-import graphic_5 from "../../public/assets/graphic_5.svg";
+import graphicFour from "../../public/assets/events/graphic_4.svg";
+import graphicFive from "../../public/assets/events/graphic_5.svg";
 
 export default function Events() {
   return (
@@ -22,7 +22,7 @@ export default function Events() {
           </span>
         </div>
         <Image
-          src={graphic_5}
+          src={graphicFive}
           className="md:ml-4 md:mt-4"
           alt="Nice Code Graphic"
           height={22}
@@ -32,7 +32,7 @@ export default function Events() {
 
       <Image
         className="absolute left-0 bottom-0 h-fit"
-        src={graphic_4}
+        src={graphicFour}
         alt="Nice Graphic"
         priority
         style={{
