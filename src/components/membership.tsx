@@ -8,12 +8,13 @@ import { Email } from "@/components/email";
 export default function Membership() {
   const submitEmail = async (formData: FormData) => {
     "use server";
+    console.log("submitting email");
 
     const rawFormData: MembershipEmailProps = {
-      firstName: formData.get("first_name"),
-      lastName: formData.get("last_name"),
-      email: formData.get("email"),
-      mobileNumber: formData.get("mobile_number"),
+      firstName: formData.get("first_name")?.toString(),
+      lastName: formData.get("last_name")?.toString(),
+      email: formData.get("email")?.toString(),
+      mobileNumber: formData.get("mobile_number")?.toString(),
     };
 
     const key = process.env.PLUNK_API_KEY;
@@ -25,11 +26,18 @@ export default function Membership() {
     const plunk = new Plunk(key);
 
     plunk.emails.send({
-      to: siteConfig.contacts.info.filter(
-        (contact) => contact.key === "Email"
-      )[0].value,
+      to: "pitzzahh@gmail.com",
       subject: "Membership request",
-      body: render(<Email name={fullName} subject="Membership request" />),
+      body: render(
+        <Email
+          name={fullName}
+          subject="Membership request"
+          firstName={rawFormData.firstName}
+          lastName={rawFormData.lastName}
+          email={rawFormData.email}
+          mobileNumber={rawFormData.mobileNumber}
+        />
+      ),
     });
     console.log(rawFormData);
   };
@@ -77,7 +85,6 @@ export default function Membership() {
             );
           })}
           <button
-            disabled={true}
             type="submit"
             className="col-span-2 w-1/2 px-4 py-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >
