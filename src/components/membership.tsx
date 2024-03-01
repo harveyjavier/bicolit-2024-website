@@ -9,7 +9,7 @@ export default function Membership() {
   const submitEmail = async (formData: FormData) => {
     "use server";
 
-    const rawFormData = {
+    const rawFormData: MembershipEmailProps = {
       firstName: formData.get("first_name"),
       lastName: formData.get("last_name"),
       email: formData.get("email"),
@@ -21,14 +21,15 @@ export default function Membership() {
       throw new Error("Plunk API key is not set");
     }
 
+    const fullName = `${rawFormData.firstName} ${rawFormData.lastName}`;
     const plunk = new Plunk(key);
 
-    const emailHtml = render(<Email url="https://araopj.me" />);
-
     plunk.emails.send({
-      to: rawFormData.email?.toString()!,
+      to: siteConfig.contacts.info.filter(
+        (contact) => contact.key === "Email"
+      )[0].value,
       subject: "Membership request",
-      body: emailHtml,
+      body: render(<Email name={fullName} subject="Membership request" />),
     });
     console.log(rawFormData);
   };
@@ -62,7 +63,7 @@ export default function Membership() {
                     ? "basis-1/2"
                     : "col-span-2 invalid:border-red-900 invalid:text-red-900 focus:invalid:border-red-900 focus:invalid:text-red-900"
                 }`}
-                required={index > 1}
+                required={true}
                 pattern={
                   formDetail.type === "tel"
                     ? "[0-9]{11}"
@@ -76,6 +77,7 @@ export default function Membership() {
             );
           })}
           <button
+            disabled={true}
             type="submit"
             className="col-span-2 w-1/2 px-4 py-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >
