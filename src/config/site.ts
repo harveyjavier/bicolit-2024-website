@@ -1,4 +1,4 @@
-import logo from "../../public/assets/logo.svg";
+import logo from "../../public/bicolit-logo.svg";
 import ogImage from "../../public/og.png";
 import one from "../../public/assets/advocates/1.png";
 import two from "../../public/assets/advocates/2.png";
