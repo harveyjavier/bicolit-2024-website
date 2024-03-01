@@ -5,6 +5,7 @@
 @font-face {
   font-family: "Helvetica LT Std Light";
   src: url("../../public/assets/fonts/light.otf");
+  font-display: swap;
 }
 
 @font-face {
