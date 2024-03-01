@@ -36,11 +36,11 @@ export default function Partners() {
 
     plunk.emails.send({
       to: "pitzzahh@gmail.com",
-      subject: "Membership request",
+      subject: "Partnership request",
       body: render(
         <Email
           name={fullName}
-          subject="Membership request"
+          subject="Partnership request"
           firstName={rawFormData.firstName}
           lastName={rawFormData.lastName}
           email={rawFormData.email}
