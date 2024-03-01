@@ -1,6 +1,9 @@
 import Input from "@/components/input";
 import { siteConfig } from "@/config/site";
 import { toast } from "sonner";
+import Plunk from "@plunk/node";
+import { render } from "@react-email/render";
+import { Email } from "@/components/email";
 
 export default function Membership() {
   const submitEmail = async (formData: FormData) => {
@@ -12,6 +15,21 @@ export default function Membership() {
       email: formData.get("email"),
       mobileNumber: formData.get("mobile_number"),
     };
+
+    const key = process.env.PLUNK_API_KEY;
+    if (!key) {
+      throw new Error("Plunk API key is not set");
+    }
+
+    const plunk = new Plunk(key);
+
+    const emailHtml = render(<Email url="https://araopj.me" />);
+
+    plunk.emails.send({
+      to: rawFormData.email?.toString()!,
+      subject: "Membership request",
+      body: emailHtml,
+    });
     console.log(rawFormData);
   };
 
