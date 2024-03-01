@@ -1,12 +1,16 @@
-type EmailProps = {
-  name: string;
-  subject: string;
-  content?: string;
-};
+type EmailProps = MembershipEmailProps &
+  ContactEmailProps & {
+    subject: string;
+    name: string;
+  };
 
 type MembershipEmailProps = {
-  firstName: FormDataEntryValue | null;
-  lastName: FormDataEntryValue | null;
-  email: FormDataEntryValue | null;
-  mobileNumber: FormDataEntryValue | null;
+  firstName: string | null | undefined;
+  lastName: string | null | undefined;
+  email: string | null | undefined;
+  mobileNumber: string | null | undefined;
+};
+
+type ContactEmailProps = MembershipEmailProps & {
+  message?: string | null | undefined;
 };
