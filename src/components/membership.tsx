@@ -36,9 +36,63 @@ export default function Membership() {
 
   return (
     <section
-      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-svh md:h-[40rem] bg-white"
+      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-white"
       id="membership"
     >
+      <div className="p-6">
+        <h1 className="text-3xl font-bold text-center text-[#330066] mb-10">
+          Bicol IT 2024 Membership Plan
+        </h1>
+        <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6 justify-center">
+          <div className="flex-1 max-w-sm mx-auto bg-[#00CCFF] rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-[#330066] text-center mb-4">
+              Basic
+            </h2>
+            <p className="text-lg font-bold text-[#330066] text-center mb-4">
+              Free
+            </p>
+            <ul className="text-[#330066] list-disc pl-5 mb-4">
+              <li>Recognized as part of the official Bicol IT community</li>
+              <li>Bicol IT user id/badge</li>
+              <li>Online group access and privilege</li>
+            </ul>
+          </div>
+          <div className="flex-1 max-w-sm mx-auto bg-[#6633CC] text-white rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-white text-center bg-[#6633CC] mb-4">
+              Growth
+            </h2>
+            <p className="text-lg line-through opacity-50 text-white text-center mb-1">
+              ₱399.00
+            </p>
+            <p className="text-2xl font-bold text-white text-center mb-4">
+              ₱249.00
+            </p>
+            <ul className="list-disc pl-5 mb-4">
+              <li>All Basic access</li>
+              <li>Discounts on paid events</li>
+              <li>Bicol IT identification card</li>
+            </ul>
+          </div>
+          <div className="flex-1 max-w-sm mx-auto bg-[#330066] text-white rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-white text-center mb-4">
+              Pro
+            </h2>
+            <p className="text-lg line-through opacity-50 text-white text-center mb-1">
+              ₱799.00
+            </p>
+            <p className="text-2xl font-bold text-white text-center mb-4">
+              ₱499.00
+            </p>
+            <ul className="list-disc pl-5 mb-4">
+              <li>All Growth access</li>
+              <li>Vouchers to access paid events</li>
+              <li>Exclusive access to paid events and merch</li>
+              <li>Bicol IT Pro group membership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="flex items-center justify-center flex-col ">
         <div className="flex items-center justify-center flex-col mb-10 gap-4">
           <span className="text-3xl text-[#330066] font-helvetica_bold font-bold">
