@@ -1,47 +1,98 @@
 import Input from "@/components/input";
+import { siteConfig } from "@/config/site";
 import { toast } from "sonner";
-
-const formDetails = [
-  {
-    placeholder: "First Name",
-    type: "text",
-    name: "first_name",
-  },
-  {
-    placeholder: "Last Name",
-    type: "text",
-    name: "last_name",
-  },
-  {
-    placeholder: "Email Address",
-    type: "email",
-    name: "email",
-  },
-  {
-    placeholder: "Mobile Number",
-    type: "tel",
-    name: "mobile_number",
-  },
-];
+import Plunk from "@plunk/node";
+import { render } from "@react-email/render";
+import { Email } from "@/components/email";
 
 export default function Membership() {
   const submitEmail = async (formData: FormData) => {
     "use server";
 
-    const rawFormData = {
+    const rawFormData: MembershipEmailProps = {
       firstName: formData.get("first_name"),
       lastName: formData.get("last_name"),
       email: formData.get("email"),
       mobileNumber: formData.get("mobile_number"),
     };
+
+    const key = process.env.PLUNK_API_KEY;
+    if (!key) {
+      throw new Error("Plunk API key is not set");
+    }
+
+    const fullName = `${rawFormData.firstName} ${rawFormData.lastName}`;
+    const plunk = new Plunk(key);
+
+    plunk.emails.send({
+      to: siteConfig.contacts.info.filter(
+        (contact) => contact.key === "Email"
+      )[0].value,
+      subject: "Membership request",
+      body: render(<Email name={fullName} subject="Membership request" />),
+    });
     console.log(rawFormData);
   };
 
   return (
     <section
-      className="container flex items-center justify-center flex-col h-svh md:h-screen bg-white"
+      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-white"
       id="membership"
     >
+      <div className="p-6">
+        <h1 className="text-3xl font-bold text-center text-[#330066] mb-10">
+          Bicol IT 2024 Membership Plan
+        </h1>
+        <div className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row sm:space-x-6 justify-center">
+          <div className="flex-1 max-w-sm mx-auto bg-[#00CCFF] rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-[#330066] text-center mb-4">
+              Basic
+            </h2>
+            <p className="text-lg font-bold text-[#330066] text-center mb-4">
+              Free
+            </p>
+            <ul className="text-[#330066] list-disc pl-5 mb-4">
+              <li>Recognized as part of the official Bicol IT community</li>
+              <li>Bicol IT user id/badge</li>
+              <li>Online group access and privilege</li>
+            </ul>
+          </div>
+          <div className="flex-1 max-w-sm mx-auto bg-[#6633CC] text-white rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-white text-center bg-[#6633CC] mb-4">
+              Growth
+            </h2>
+            <p className="text-lg line-through opacity-50 text-white text-center mb-1">
+              ₱399.00
+            </p>
+            <p className="text-2xl font-bold text-white text-center mb-4">
+              ₱249.00
+            </p>
+            <ul className="list-disc pl-5 mb-4">
+              <li>All Basic access</li>
+              <li>Discounts on paid events</li>
+              <li>Bicol IT identification card</li>
+            </ul>
+          </div>
+          <div className="flex-1 max-w-sm mx-auto bg-[#330066] text-white rounded-lg shadow-md p-6 w-full">
+            <h2 className="text-2xl font-semibold text-white text-center mb-4">
+              Pro
+            </h2>
+            <p className="text-lg line-through opacity-50 text-white text-center mb-1">
+              ₱799.00
+            </p>
+            <p className="text-2xl font-bold text-white text-center mb-4">
+              ₱499.00
+            </p>
+            <ul className="list-disc pl-5 mb-4">
+              <li>All Growth access</li>
+              <li>Vouchers to access paid events</li>
+              <li>Exclusive access to paid events and merch</li>
+              <li>Bicol IT Pro group membership</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div className="flex items-center justify-center flex-col ">
         <div className="flex items-center justify-center flex-col mb-10 gap-4">
           <span className="text-3xl text-[#330066] font-helvetica_bold font-bold">
@@ -56,7 +107,7 @@ export default function Membership() {
           action={submitEmail}
           className="grid place-content-center place-items-center grid-cols-2 grid-rows-4 gap-4 w-full md:px-16 p-2"
         >
-          {formDetails.map((formDetail, index) => {
+          {siteConfig.formDetails.map((formDetail, index) => {
             return (
               <Input
                 name={formDetail.name}
@@ -66,7 +117,7 @@ export default function Membership() {
                     ? "basis-1/2"
                     : "col-span-2 invalid:border-red-900 invalid:text-red-900 focus:invalid:border-red-900 focus:invalid:text-red-900"
                 }`}
-                required={index > 1}
+                required={true}
                 pattern={
                   formDetail.type === "tel"
                     ? "[0-9]{11}"
@@ -80,6 +131,7 @@ export default function Membership() {
             );
           })}
           <button
+            disabled={true}
             type="submit"
             className="col-span-2 w-1/2 px-4 py-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >

@@ -10,8 +10,9 @@
 @font-face {
   font-family: "Helvetica LT Std Bold";
   src: url("../../public/assets/fonts/bold.otf");
+  font-display: swap;
 }
 
 body {
-  font-family: "Helvetica LT Std Light";
+  font-family: "Helvetica LT Std Light", sans-serif;
 }
