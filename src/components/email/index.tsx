@@ -2,7 +2,9 @@ import * as React from "react";
 import { Hr, Html, Heading, Img, Tailwind } from "@react-email/components";
 import { siteConfig } from "@/config/site";
 
-export function Email(props: EmailProps) {
+export function Email(
+  props: MembershipEmailProps | ContactEmailProps | EmailProps
+) {
   return (
     <Tailwind>
       <Html

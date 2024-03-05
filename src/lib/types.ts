@@ -1,8 +1,7 @@
-type EmailProps = MembershipEmailProps &
-  ContactEmailProps & {
-    subject: string;
-    name: string;
-  };
+type EmailProps = {
+  subject: string;
+  name: string;
+};
 
 type MembershipEmailProps = {
   firstName: string | null | undefined;
