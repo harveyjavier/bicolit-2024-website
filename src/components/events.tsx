@@ -1,6 +1,7 @@
 import Image from "next/image";
 import graphicFour from "../../public/assets/events/graphic_4.svg";
 import graphicFive from "../../public/assets/events/graphic_5.svg";
+import thumnail from '../../public/assets/vid-thumbnail.png'
 
 export default function Events() {
   return (
@@ -8,7 +9,17 @@ export default function Events() {
       className="container relative h-svh md:h-[68rem] bg-[#330066] md:p-24 text-white"
       id="events"
     >
-      <div className="flex justify-center flex-col gap-4 h-full">
+      <video
+        controls
+        preload="none"
+        aria-label="Video player"
+        poster={thumnail.src}
+        className="absolute top-0 right-0 left-0 -translate-y-[75%] mx-auto md:z-10 z-[5] w-10/12"
+      >
+        <source src="solana-ecosystem-call.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="flex justify-end flex-col gap-4 h-full">
         <h2 className="font-helvetica_bold text-2xl font-extrabold text-white">
           Events
         </h2>

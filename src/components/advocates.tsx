@@ -17,7 +17,7 @@ export default function Advocates() {
           return (
             <Card
               key={index}
-              cardClass="even:my-4 hover:cursor-pointer]"
+              cardClass="even:my-4 hover:cursor-pointer"
               imageSource={advocate.imageSource}
               imageWidth={333}
               imageHeight={333}
