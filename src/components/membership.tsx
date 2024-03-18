@@ -93,7 +93,8 @@ export default function Membership() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col ">
+      {/* TODO: Finish email integration */}
+      {/* <div className="flex items-center justify-center flex-col ">
         <div className="flex items-center justify-center flex-col mb-10 gap-4">
           <span className="text-3xl text-[#330066] font-helvetica_bold font-bold">
             Join us now
@@ -133,12 +134,19 @@ export default function Membership() {
           <button
             disabled={true}
             type="submit"
-            className="col-span-2 w-1/2 px-4 py-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
+            className="col-span-2 w-1/2 pt-2 pb-1 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >
             Submit
           </button>
         </form>
-      </div>
+      </div> */}
+      <a
+        href={siteConfig.contacts.group}
+        target="_blank"
+        className="w-1/2 h-full pt-2 pb-1 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white text-center "
+      >
+        Join Us Now
+      </a>
     </section>
   );
 }
