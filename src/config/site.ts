@@ -137,6 +137,7 @@ export const siteConfig = {
         url: "https://x.com/bicolit",
       },
     ],
+    group: "https://www.facebook.com/groups/194616090699146"
   },
 };
 
