@@ -17,7 +17,7 @@ export default function Home() {
       <About />
       <Events />
       <Membership />
-      <Blogs />
+      {/* <Blogs /> */}
       <Advocates />
       <Partners />
     </main>
