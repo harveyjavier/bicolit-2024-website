@@ -44,7 +44,7 @@ export default function Membership() {
 
   return (
     <section
-      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-white"
+      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-[#E8E2EE] text-black"
       id="membership"
     >
       <div className="p-6">
@@ -101,7 +101,8 @@ export default function Membership() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col ">
+      {/* TODO: Finish email integration */}
+      {/* <div className="flex items-center justify-center flex-col ">
         <div className="flex items-center justify-center flex-col mb-10 gap-4">
           <span className="text-3xl text-[#330066] font-helvetica_bold font-bold">
             Join us now
@@ -140,12 +141,19 @@ export default function Membership() {
           })}
           <button
             type="submit"
-            className="col-span-2 w-1/2 px-4 py-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
+            className="col-span-2 w-1/2 pt-2 pb-1 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >
             Submit
           </button>
         </form>
-      </div>
+      </div> */}
+      <a
+        href={siteConfig.contacts.group}
+        target="_blank"
+        className="pt-4 pb-2 px-4 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white text-center "
+      >
+        Join Us Now
+      </a>
     </section>
   );
 }
