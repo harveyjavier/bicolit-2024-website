@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({
           alt={`${title} card image`}
           width={imageWidth ?? 500}
           height={imageHeight ?? 500}
-          className={`object-cover ${imgGradient}`}
+          className={`object-cover ${imgGradient} grayscale hover:grayscale-0 transition-all duration-500 delay-50`}
         />
         {imgGradient && <div className={`absolute ${imgGradient}`} />}
       </div>

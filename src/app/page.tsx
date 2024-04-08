@@ -6,6 +6,8 @@ import Membership from "@/components/membership";
 import Blogs from "@/components/blogs";
 import Advocates from "@/components/advocates";
 import Partners from "@/components/partners";
+import StudentCouncil from "@/components/student-council";
+import Founder from "@/components/founder";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <Membership />
       {/* <Blogs /> */}
       <Advocates />
+      <StudentCouncil />
+      <Founder />
       <Partners />
     </main>
   );

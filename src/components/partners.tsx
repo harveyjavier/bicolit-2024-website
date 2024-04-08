@@ -1,6 +1,9 @@
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import Input from "@/components/input";
+import Plunk from "@plunk/node";
+import { render } from "@react-email/render";
+import { Email } from "@/components/email";
 
 const formDetails = [
   ...siteConfig.formDetails,
@@ -15,15 +18,34 @@ export default function Partners() {
   const submitEmail = async (formData: FormData) => {
     "use server";
 
-    const rawFormData = {
-      firstName: formData.get("first_name"),
-      lastName: formData.get("last_name"),
-      email: formData.get("email"),
-      mobileNumber: formData.get("mobile_number"),
-      message: formData.get("message"),
+    const rawFormData: ContactEmailProps = {
+      firstName: formData.get("first_name")?.toString(),
+      lastName: formData.get("last_name")?.toString(),
+      email: formData.get("email")?.toString(),
+      mobileNumber: formData.get("mobile_number")?.toString(),
+      message: formData.get("message")?.toString(),
     };
 
-    // TODO: send email
+    const key = process.env.PLUNK_API_KEY;
+    if (!key) {
+      throw new Error("Plunk API key is not set");
+    }
+
+    const plunk = new Plunk(key);
+
+    await plunk.emails.send({
+      to: "pitzzahh@gmail.com",
+      subject: "Partnership request",
+      body: render(
+        <Email
+          firstName={rawFormData.firstName}
+          lastName={rawFormData.lastName}
+          email={rawFormData.email}
+          mobileNumber={rawFormData.mobileNumber}
+          message={rawFormData.message}
+        />
+      ),
+    });
     console.log(rawFormData);
   };
   return (
