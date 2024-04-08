@@ -22,16 +22,13 @@ export default function Membership() {
       throw new Error("Plunk API key is not set");
     }
 
-    const fullName = `${rawFormData.firstName} ${rawFormData.lastName}`;
     const plunk = new Plunk(key);
 
-    plunk.emails.send({
+    await plunk.emails.send({
       to: "pitzzahh@gmail.com",
       subject: "Membership request",
       body: render(
         <Email
-          name={fullName}
-          subject="Membership request"
           firstName={rawFormData.firstName}
           lastName={rawFormData.lastName}
           email={rawFormData.email}
@@ -39,7 +36,6 @@ export default function Membership() {
         />
       ),
     });
-    console.log(rawFormData);
   };
 
   return (

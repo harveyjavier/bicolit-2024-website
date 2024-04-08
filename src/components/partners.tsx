@@ -31,16 +31,13 @@ export default function Partners() {
       throw new Error("Plunk API key is not set");
     }
 
-    const fullName = `${rawFormData.firstName} ${rawFormData.lastName}`;
     const plunk = new Plunk(key);
 
-    plunk.emails.send({
+    await plunk.emails.send({
       to: "pitzzahh@gmail.com",
       subject: "Partnership request",
       body: render(
         <Email
-          name={fullName}
-          subject="Partnership request"
           firstName={rawFormData.firstName}
           lastName={rawFormData.lastName}
           email={rawFormData.email}
@@ -49,9 +46,6 @@ export default function Partners() {
         />
       ),
     });
-    console.log(rawFormData);
-
-    // TODO: send email
     console.log(rawFormData);
   };
   return (
