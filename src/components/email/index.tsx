@@ -2,17 +2,6 @@ import * as React from "react";
 import { Html, Img, Heading, Text, Tailwind } from "@react-email/components";
 import { siteConfig } from "@/config/site";
 
-type MembershipEmailProps = {
-  firstName: string | null | undefined;
-  lastName: string | null | undefined;
-  email: string | null | undefined;
-  mobileNumber: string | null | undefined;
-};
-
-type ContactEmailProps = MembershipEmailProps & {
-  message?: string | null | undefined;
-};
-
 export function Email(props: MembershipEmailProps | ContactEmailProps) {
   const isMembershipEmail =
     "firstName" in props &&
@@ -86,8 +75,8 @@ function ContactContent(props: ContactEmailProps) {
         you.
       </Text>
       <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
-        How can we assist you? Please let us know what you need, and we'll be
-        happy to help.
+        How can we assist you? Please let us know what you need, and we&apos;ll
+        be happy to help.
       </Text>
       {props.message && (
         <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
