@@ -7,7 +7,7 @@ import SectionHeader from "./section-header";
 export default function Founder() {
   return (
     <div className="container px-4 py-6 md:px-24 flex h-auto flex-col justify-around gap-6">
-      <SectionHeader id="founder" title="The Founder" />
+      <SectionHeader id="founder" title="Founders" />
       <div className="flex flex-wrap items-center justify-center lg:justify-between gap-4">
         {siteConfig.founders.map((founder, index) => (
           <Card
