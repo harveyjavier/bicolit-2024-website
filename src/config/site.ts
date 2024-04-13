@@ -9,6 +9,7 @@ import {
   headOfTechnology,
   headOfPartnershipAndRelations,
   financeOfficer,
+  boardMember,
 } from "../../public/assets/advocates";
 import {
   councilPresident,
@@ -101,8 +102,14 @@ export const siteConfig = {
     {
       imageSource: financeOfficer,
       name: "Felix Oliver Zuñiga",
-      linkedin: "",
+      linkedin: "https://www.linkedin.com/in/fobzuniga",
       position: "Finance Officer",
+    },
+    {
+      imageSource: boardMember,
+      name: "Josh Henry Regondola",
+      linkedin: "https://www.linkedin.com/in/henryregondola",
+      position: "Board Member",
     },
   ],
   studentCouncil: [
