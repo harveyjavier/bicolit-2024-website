@@ -1,14 +1,35 @@
 import logo from "../../public/bicolit-logo.svg";
 import ogImage from "../../public/og.png";
-import one from "../../public/assets/advocates/1.png";
-import two from "../../public/assets/advocates/2.png";
-import three from "../../public/assets/advocates/3.png";
-import four from "../../public/assets/advocates/4.png";
-import five from "../../public/assets/advocates/5.png";
-import six from "../../public/assets/advocates/6.png";
 import facebook from "../../public/assets/partners/facebook.svg";
 import instagram from "../../public/assets/partners/ig.svg";
 import x from "../../public/assets/partners/x.svg";
+import {
+  president,
+  headOfCreatives,
+  headOfTechnology,
+  headOfPartnershipAndRelations,
+  financeOfficer,
+} from "../../public/assets/advocates";
+import {
+  councilPresident,
+  externalRelationsOfficer,
+  studentFinaceOfficer,
+  eventCoordinator,
+  technologyOfficer,
+  communityCoordinator,
+  studentSecretary,
+  promotionsLead,
+  membershipChair,
+  executiveViceChairPerson,
+} from "../../public/assets/student-council/";
+
+import {
+  founderHarris,
+  founderRico,
+  founderRichardGonzales,
+  founderRichardNacar,
+  founderJason,
+} from "../../public/assets/founders";
 
 export const siteConfig = {
   name: "Bicol IT",
@@ -40,46 +61,142 @@ export const siteConfig = {
       href: "#advocates",
     },
     {
+      title: "Student Council",
+      href: "#student-council",
+    },
+    {
+      title: "Founders",
+      href: "#founders",
+    },
+    {
       title: "Partners",
       href: "#partners",
     },
   ],
   advocates: [
     {
-      imageSource: one,
+      imageSource: president,
       name: "Ismael Jerusalem",
       linkedin: "https://ph.linkedin.com/in/ismaeljerusalem",
       position: "President",
     },
     {
-      imageSource: two,
+      imageSource: headOfCreatives,
       name: "Will Añonuevo",
       linkedin: "https://ph.linkedin.com/in/williamanonuevo",
       position: "Head of Creatives",
     },
     {
-      imageSource: three,
+      imageSource: headOfTechnology,
       name: "Harvey Havier",
       linkedin: "https://ph.linkedin.com/in/harveyjavier",
       position: "Head of Technology",
     },
     {
-      imageSource: four,
+      imageSource: headOfPartnershipAndRelations,
       name: "Harris Osianna",
       linkedin: "",
       position: "Head of Partnership and Relations",
     },
     {
-      imageSource: five,
+      imageSource: financeOfficer,
       name: "Felix Oliver Zuñiga",
       linkedin: "",
       position: "Finance Officer",
     },
+  ],
+  studentCouncil: [
     {
-      imageSource: six,
+      imageSource: councilPresident,
       name: "Kenneth Aycardo",
       linkedin: "",
-      position: "Student Council President",
+      position: "President",
+    },
+    {
+      imageSource: executiveViceChairPerson,
+      name: "Dimmie Eya Luces",
+      linkedin: "",
+      position: "Executive Vice Chairperson",
+    },
+    {
+      imageSource: studentSecretary,
+      name: "Olan Gomez",
+      linkedin: "",
+      position: "Secretary",
+    },
+    {
+      imageSource: membershipChair,
+      name: "Renmar Balana",
+      linkedin: "",
+      position: "Membership Chair",
+    },
+    {
+      imageSource: externalRelationsOfficer,
+      name: "Sean Jethro A. Palacay",
+      linkedin: "",
+      position: "External Relations Officer",
+    },
+    {
+      imageSource: promotionsLead,
+      name: "John Francis Lomeda",
+      linkedin: "",
+      position: "Promotions Lead",
+    },
+    {
+      imageSource: studentFinaceOfficer,
+      name: "Paul Dannielle P. Yanzon",
+      linkedin: "",
+      position: "Finance Officer",
+    },
+    {
+      imageSource: eventCoordinator,
+      name: "Cyril Christian B. Imperial",
+      linkedin: "",
+      position: "Event Coordinator",
+    },
+    {
+      imageSource: communityCoordinator,
+      name: "Kadmiel Ross B. Baiño",
+      linkedin: "",
+      position: "Community Coordinator",
+    },
+    {
+      imageSource: technologyOfficer,
+      name: "Peter John Arao",
+      linkedin: "https://www.linkedin.com/in/peter-john-arao/",
+      position: "Technology Officer",
+    },
+  ],
+  founders: [
+    {
+      imageSource: founderHarris,
+      name: "Harris Rainer",
+      linkedin: "https://www.linkedin.com/in/ohrainier",
+      position: "Founder",
+    },
+    {
+      imageSource: founderRico,
+      name: "Rico Zuñiga",
+      linkedin: "https://www.linkedin.com/in/ricoz/",
+      position: "Founder",
+    },
+    {
+      imageSource: founderJason,
+      name: "Jason Batalla",
+      linkedin: "https://www.linkedin.com/in/jasonbatalla/",
+      position: "Founder",
+    },
+    {
+      imageSource: founderRichardGonzales,
+      name: "Richard Gonzales",
+      linkedin: "https://www.linkedin.com/in/chardgonzales/",
+      position: "Founder",
+    },
+    {
+      imageSource: founderRichardNacar,
+      name: "Richard Nacar",
+      linkedin: "https://www.linkedin.com/in/richardnacar/",
+      position: "Founder",
     },
   ],
   formDetails: [
@@ -137,7 +254,7 @@ export const siteConfig = {
         url: "https://x.com/bicolit",
       },
     ],
-    group: "https://www.facebook.com/groups/194616090699146"
+    group: "https://www.facebook.com/groups/194616090699146",
   },
 };
 

@@ -8,12 +8,13 @@ import { Email } from "@/components/email";
 export default function Membership() {
   const submitEmail = async (formData: FormData) => {
     "use server";
+    console.log("submitting email");
 
     const rawFormData: MembershipEmailProps = {
-      firstName: formData.get("first_name"),
-      lastName: formData.get("last_name"),
-      email: formData.get("email"),
-      mobileNumber: formData.get("mobile_number"),
+      firstName: formData.get("first_name")?.toString(),
+      lastName: formData.get("last_name")?.toString(),
+      email: formData.get("email")?.toString(),
+      mobileNumber: formData.get("mobile_number")?.toString(),
     };
 
     const key = process.env.PLUNK_API_KEY;
@@ -21,17 +22,24 @@ export default function Membership() {
       throw new Error("Plunk API key is not set");
     }
 
-    const fullName = `${rawFormData.firstName} ${rawFormData.lastName}`;
     const plunk = new Plunk(key);
 
-    plunk.emails.send({
-      to: siteConfig.contacts.info.filter(
-        (contact) => contact.key === "Email"
-      )[0].value,
+    await plunk.emails.send({
+      to: siteConfig.contacts.info[2].value,
       subject: "Membership request",
-      body: render(<Email name={fullName} subject="Membership request" />),
+      body: render(
+        <Email
+          firstName={rawFormData.firstName}
+          lastName={rawFormData.lastName}
+          email={rawFormData.email}
+          mobileNumber={rawFormData.mobileNumber}
+        />
+      ),
     });
-    console.log(rawFormData);
+    formData.delete("first_name");
+    formData.delete("last_name");
+    formData.delete("email");
+    formData.delete("mobile_number");
   };
 
   return (
@@ -132,7 +140,6 @@ export default function Membership() {
             );
           })}
           <button
-            disabled={true}
             type="submit"
             className="col-span-2 w-1/2 pt-2 pb-1 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white"
           >
