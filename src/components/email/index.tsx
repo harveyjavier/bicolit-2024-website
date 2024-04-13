@@ -32,7 +32,7 @@ export function Email(props: MembershipEmailProps | ContactEmailProps) {
             Welcome to Bicol IT!
           </Heading>
           {isMembershipEmail ? (
-            <MembershipContent {...(props as MembershipEmailProps)} />
+            <MembershipReplyContent {...(props as MembershipEmailProps)} />
           ) : (
             <ContactContent {...(props as ContactEmailProps)} />
           )}
@@ -42,9 +42,9 @@ export function Email(props: MembershipEmailProps | ContactEmailProps) {
   );
 }
 
-function MembershipContent(props: MembershipEmailProps) {
+function MembershipReplyContent(props: MembershipEmailProps) {
   return (
-    <>
+    <div className="flex gap-4 flex-col">
       <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
         Hi {props.firstName} {props.lastName},
       </Text>
@@ -58,25 +58,19 @@ function MembershipContent(props: MembershipEmailProps) {
       </Text>
       <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
         If you have any questions in the meantime, feel free to reach out to us
-        at {props.email} or {props.mobileNumber}.
+        at {siteConfig.contacts.info[2].value} or{" "}
+        {siteConfig.contacts.info[1].value}.
       </Text>
-    </>
+    </div>
   );
 }
 
 function ContactContent(props: ContactEmailProps) {
   return (
-    <>
+    <div className="flex gap-4 flex-col">
       <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
-        Hi there,
-      </Text>
-      <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
-        Thank you for reaching out to Bicol IT! We are thrilled to hear from
-        you.
-      </Text>
-      <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
-        How can we assist you? Please let us know what you need, and we&apos;ll
-        be happy to help.
+        Hi, someone wants to contact with name: {props.firstName}{" "}
+        {props.lastName}.
       </Text>
       {props.message && (
         <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
@@ -84,10 +78,9 @@ function ContactContent(props: ContactEmailProps) {
         </Text>
       )}
       <Text style={{ color: "#ffffff", fontSize: "16px", margin: "10px 0" }}>
-        You can also contact us directly at {props.email} or{" "}
-        {props.mobileNumber}.
+        You can also contact them at {props.email} or {props.mobileNumber}.
       </Text>
-    </>
+    </div>
   );
 }
 
