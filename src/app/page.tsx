@@ -1,13 +1,11 @@
 import Header from "@/components/header";
 import Hero from "@/components/hero";
+import Partners from "@/components/partners";
 import About from "@/components/about";
 import Events from "@/components/events";
 import Membership from "@/components/membership";
 import Blogs from "@/components/blogs";
-import Advocates from "@/components/advocates";
-import Partners from "@/components/partners";
-import StudentCouncil from "@/components/student-council";
-import Founder from "@/components/founder";
+import TabbedSection from "@/components/tabbed-section";
 
 export default function Home() {
   return (
@@ -20,9 +18,7 @@ export default function Home() {
       <Events />
       <Membership />
       {/* <Blogs /> */}
-      <Advocates />
-      <StudentCouncil />
-      <Founder />
+      <TabbedSection />
       <Partners />
     </main>
   );
