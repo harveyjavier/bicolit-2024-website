@@ -65,8 +65,8 @@ export const siteConfig = {
       href: "#student-council",
     },
     {
-      title: "Founder",
-      href: "#founder",
+      title: "Founders",
+      href: "#founders",
     },
     {
       title: "Partners",
