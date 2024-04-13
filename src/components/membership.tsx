@@ -25,7 +25,7 @@ export default function Membership() {
     const plunk = new Plunk(key);
 
     await plunk.emails.send({
-      to: "pitzzahh@gmail.com",
+      to: siteConfig.contacts.info[2].value,
       subject: "Membership request",
       body: render(
         <Email
@@ -36,6 +36,10 @@ export default function Membership() {
         />
       ),
     });
+    formData.delete("first_name");
+    formData.delete("last_name");
+    formData.delete("email");
+    formData.delete("mobile_number");
   };
 
   return (

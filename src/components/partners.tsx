@@ -34,7 +34,7 @@ export default function Partners() {
     const plunk = new Plunk(key);
 
     await plunk.emails.send({
-      to: "pitzzahh@gmail.com",
+      to: siteConfig.contacts.info[2].value,
       subject: "Partnership request",
       body: render(
         <Email
@@ -46,7 +46,11 @@ export default function Partners() {
         />
       ),
     });
-    console.log(rawFormData);
+    formData.delete("first_name");
+    formData.delete("last_name");
+    formData.delete("email");
+    formData.delete("mobile_number");
+    formData.delete("message");
   };
   return (
     <section
