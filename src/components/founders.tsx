@@ -2,25 +2,29 @@ import Card from "@/components/card";
 import { siteConfig } from "@/config/site";
 import AdvocateTitle from "./advocate-title";
 import linkedinIcon from "../../public/assets/linkedin.svg";
+import SectionHeader from "./section-header";
 
-export default function Advocates() {
+export default function Founders() {
   return (
-    <div className="flex flex-wrap items-center justify-between gap-6 space-x-px">
-      {siteConfig.advocates.map((advocate, index) => (
+    <div
+      id="founders"
+      className="flex flex-wrap items-center justify-between gap-6 space-x-px"
+    >
+      {siteConfig.founders.map((founder, index) => (
         <Card
-          key={index}
           cardClass="even:my-4 hover:cursor-pointer"
-          imageSource={advocate.imageSource}
+          imageSource={founder.imageSource}
           imageWidth={333}
+          key={index}
           imageHeight={333}
           title={
             <AdvocateTitle
-              title={advocate.name}
-              url={advocate.linkedin}
+              title={founder.name}
+              url={founder.linkedin}
               icon={linkedinIcon}
             />
           }
-          description={advocate.position}
+          description={founder.position}
         />
       ))}
     </div>
