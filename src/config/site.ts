@@ -262,6 +262,7 @@ export const siteConfig = {
       },
     ],
     group: "https://www.facebook.com/groups/194616090699146",
+    membership: "https://docs.google.com/forms/d/e/1FAIpQLSdA8CorhD6jXJ-EwaAg4gHlv_TVqfwY67VExd9QCYcVENlwvw/viewform",
   },
 };
 

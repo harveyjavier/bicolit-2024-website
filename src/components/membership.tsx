@@ -148,7 +148,7 @@ export default function Membership() {
         </form>
       </div> */}
       <a
-        href={siteConfig.contacts.group}
+        href={siteConfig.contacts.membership}
         target="_blank"
         className="pt-4 pb-2 px-4 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white text-center "
       >
