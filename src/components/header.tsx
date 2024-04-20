@@ -131,7 +131,7 @@ export default function Header() {
               <NavigationMenu.Trigger className="group flex select-none items-center justify-between text-[15px] leading-none outline-none">
                 <a
                   href="#advocates"
-                  onClick={() => handleChangeNavLink("#student-council")}
+                  onClick={() => handleChangeNavLink("#advocates")}
                 >
                   Advocates{" "}
                 </a>
