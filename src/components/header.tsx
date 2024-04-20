@@ -7,12 +7,18 @@ import { useEffect, useState } from "react";
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import { CaretDownIcon } from "@radix-ui/react-icons";
+import { useStateContext } from "@/lib/state";
 
 const hiddenNavLink = ["Advocates", "Student Council", "Founders", "Partners"];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const { setState } = useStateContext();
+
+  const handleChangeNavLink = (link: string) => {
+    setState((state: any) => ({ ...state, link }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,7 +129,12 @@ export default function Header() {
           <NavigationMenu.List className="center m-0 flex list-none">
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className="group flex select-none items-center justify-between text-[15px] leading-none outline-none">
-                <a href="#advocates">Advocates </a>
+                <a
+                  href="#advocates"
+                  onClick={() => handleChangeNavLink("#student-council")}
+                >
+                  Advocates{" "}
+                </a>
                 <CaretDownIcon
                   className="relative transition-transform duration-[200] ease-in group-data-[state=open]:-rotate-180"
                   aria-hidden
@@ -131,8 +142,16 @@ export default function Header() {
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="absolute top-6 backdrop-blur-md rounded-sm shrink-0 ">
                 <ul className="flex flex-col gap-2 list-none ">
-                  <ListItem title="Student Council" href="#student-council" />
-                  <ListItem title="Founders" href="#founders" />
+                  <ListItem
+                    title="Student Council"
+                    href="#student-council"
+                    onClick={() => handleChangeNavLink("#student-council")}
+                  />
+                  <ListItem
+                    title="Founders"
+                    href="#founders"
+                    onClick={() => handleChangeNavLink("#founders")}
+                  />
                 </ul>
               </NavigationMenu.Content>
             </NavigationMenu.Item>
