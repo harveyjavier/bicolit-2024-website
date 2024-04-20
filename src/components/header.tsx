@@ -212,3 +212,5 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
     </li>
   )
 );
+
+ListItem.displayName = "ListItem";
