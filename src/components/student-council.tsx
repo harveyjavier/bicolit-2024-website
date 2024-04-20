@@ -1,8 +1,7 @@
 import Card from "@/components/card";
 import { siteConfig } from "@/config/site";
 import AdvocateTitle from "./advocate-title";
-import linkedinIcon from "../../public/assets/linkedin.svg";
-import SectionHeader from "./section-header";
+import linkedinIcon from "../../public/assets/In-Blue-128.png";
 import Image from "next/image";
 
 export default function StudentCouncil() {
@@ -39,6 +38,7 @@ export default function StudentCouncil() {
                     alt={`${student.school} icon`}
                     width={22}
                     height={22}
+                    className="grayscale hover:grayscale-0 transition-all duration-200 delay-50"
                   />
                 </a>
               </div>

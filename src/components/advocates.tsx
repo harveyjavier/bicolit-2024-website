@@ -1,7 +1,7 @@
 import Card from "@/components/card";
 import { siteConfig } from "@/config/site";
 import AdvocateTitle from "./advocate-title";
-import linkedinIcon from "../../public/assets/linkedin.svg";
+import linkedinIcon from "../../public/assets/In-Blue-128.png";
 
 export default function Advocates() {
   return (
