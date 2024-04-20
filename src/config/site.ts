@@ -3,6 +3,7 @@ import ogImage from "../../public/og.png";
 import facebook from "../../public/assets/partners/facebook.svg";
 import instagram from "../../public/assets/partners/ig.svg";
 import x from "../../public/assets/partners/x.svg";
+import { bu, dwcl, cspc } from "../../public/assets/student-council";
 import {
   president,
   headOfCreatives,
@@ -48,6 +49,10 @@ export const siteConfig = {
     {
       title: "Events",
       href: "#events",
+    },
+    {
+      title: "News and Updates",
+      href: "#news-and-updates",
     },
     {
       title: "Membership",
@@ -115,63 +120,93 @@ export const siteConfig = {
   studentCouncil: [
     {
       imageSource: councilPresident,
+      school: "Bicol University",
       name: "Kenneth Aycardo",
       linkedin: "",
       position: "President",
+      schoolLogo: bu,
+      schoolSite: "https://www.bicol-u.edu.ph/",
     },
     {
       imageSource: executiveViceChairPerson,
+      school: "Camarines Sur Polytechnic Colleges",
       name: "Dimmie Eya Luces",
       linkedin: "",
       position: "Executive Vice Chairperson",
+      schoolLogo: cspc,
+      schoolSite: "https://cspc.edu.ph",
     },
     {
       imageSource: studentSecretary,
+      school: "Bicol University",
       name: "Olan Gomez",
       linkedin: "",
       position: "Secretary",
+      schoolLogo: bu,
+      schoolSite: "https://www.bicol-u.edu.ph/",
     },
     {
       imageSource: membershipChair,
+      school: "Bicol University",
       name: "Renmar Balana",
       linkedin: "",
       position: "Membership Chair",
+      schoolLogo: bu,
+      schoolSite: "https://www.bicol-u.edu.ph/",
     },
     {
       imageSource: externalRelationsOfficer,
+      school: "Bicol University",
       name: "Sean Jethro A. Palacay",
       linkedin: "",
       position: "External Relations Officer",
+      schoolLogo: bu,
+      schoolSite: "https://www.bicol-u.edu.ph/",
     },
     {
       imageSource: promotionsLead,
+      school: "Camarines Sur Polytechnic Colleges",
       name: "John Francis Lomeda",
       linkedin: "",
       position: "Promotions Lead",
+      schoolLogo: cspc,
+      schoolSite: "https://cspc.edu.ph",
     },
     {
       imageSource: studentFinaceOfficer,
+      school: "STI College Legazpi",
       name: "Paul Dannielle P. Yanzon",
       linkedin: "",
       position: "Finance Officer",
+      schoolLogo: "",
+      schoolSite: "https://sti.edu/campuses-details.asp?campus_id=TEVH",
     },
     {
       imageSource: eventCoordinator,
+      school: "Camarinse Sur Polytechnic Colleges",
       name: "Cyril Christian B. Imperial",
       linkedin: "",
       position: "Event Coordinator",
+      schoolLogo: cspc,
+      schoolSite: "https://cspc.edu.ph",
     },
     {
       imageSource: communityCoordinator,
+      school: "Divine Word College of Legazpi",
       name: "Kadmiel Ross B. Baiño",
       linkedin: "",
       position: "Community Coordinator",
+      schoolLogo: dwcl,
+      schoolSite: "https://www.dwc-legazpi.edu",
     },
     {
       imageSource: technologyOfficer,
+      school: "STI College Legazpi",
       name: "Peter John Arao",
       linkedin: "https://www.linkedin.com/in/peter-john-arao/",
       position: "Technology Officer",
+      schoolLogo: "",
+      schoolSite: "https://sti.edu/campuses-details.asp?campus_id=TEVH",
     },
   ],
   founders: [
@@ -262,7 +297,8 @@ export const siteConfig = {
       },
     ],
     group: "https://www.facebook.com/groups/194616090699146",
-    membership: "https://docs.google.com/forms/d/e/1FAIpQLSdA8CorhD6jXJ-EwaAg4gHlv_TVqfwY67VExd9QCYcVENlwvw/viewform",
+    membership:
+      "https://docs.google.com/forms/d/e/1FAIpQLSdA8CorhD6jXJ-EwaAg4gHlv_TVqfwY67VExd9QCYcVENlwvw/viewform",
   },
 };
 
