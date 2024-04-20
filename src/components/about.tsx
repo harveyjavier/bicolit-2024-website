@@ -4,10 +4,10 @@ import graphicTwo from "../../public/assets/about/graphic_2.svg";
 export default function About() {
   return (
     <section
-      className="relative -z-10 container h-full md:h-[50rem] flex items-start justify-center md:px-36 pt-14 gap-10 pb-36"
+      className="relative -z-10 container px-4 h-full md:h-[50rem] flex items-start justify-center pt-14 gap-10 pb-32"
       id="about"
     >
-      <h2 dir="rtl" className="font-bold text-xl leading-5 ">
+      <h2 dir="rtl" className="font-bold  text-xl leading-5 ">
         We&lsquo;re the biggest and most
         <br /> active IT education advocacy organization in the Bicol region
         with 5k&#43; members

@@ -10,7 +10,7 @@ export default function TabbedSection() {
   return (
     <Tabs.Root
       defaultValue="advocates"
-      className="container px-4 py-6 md:px-24 md:pt-24 flex h-auto flex-col justify-around gap-6"
+      className="px-4 py-6 md:px-24 md:pt-24 flex h-auto flex-col justify-around gap-6"
     >
       <Tabs.List
         aria-label="Manage your account"

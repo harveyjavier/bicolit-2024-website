@@ -13,7 +13,7 @@ export default function Hero() {
         width={650}
         priority
       />
-      <div className="grow flex items-start sm:flex-row z-[1] md:items-end md:justify-end flex-col h-full">
+      <div className="grow flex items-start sm:flex-row z-[1] md:items-end md:justify-center flex-col h-full">
         <div className="flex items-end md:items-center h-full">
           <span className="text-white md:translate-x-16 font-helvetica_bold text-5xl md:text-6xl lg:text-[7.5rem] leading-[1] font-bold">
             Innovating

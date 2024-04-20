@@ -10,7 +10,7 @@ import TabbedSection from "@/components/tabbed-section";
 export default function Home() {
   return (
     <main>
-      <section className="container relative flex  flex-col md:h-[50rem] h-svh bg-gradient-to-tl to-[#00C2FF] via-[60%] via-[#6633C2] from-[#330066]">
+      <section className="relative flex px-4 pt-4  flex-col md:h-[50rem] h-svh bg-gradient-to-tl to-[#00C2FF] via-[60%] via-[#6633C2] from-[#330066]">
         <Header />
         <Hero />
       </section>
