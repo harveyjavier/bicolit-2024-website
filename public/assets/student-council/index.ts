@@ -6,7 +6,7 @@ export { default as technologyOfficer } from "../../assets/student-council/43217
 
 export { default as studentSecretary } from "../../assets/student-council/Gomez - Secretary.jpg";
 export { default as communityCoordinator } from "../../assets/student-council/Community Coordinator_Kadmiel Ross B. Baiño.jpg";
-export { default as membershipChair } from "../../assets/placeholder.svg";
+export { default as membershipChair } from "../../assets/student-council/Balana - MembershipChair.jpg";
 export { default as promotionsLead } from "../../assets/student-council/Promotions Lead_John Francis B. Lomeda.png";
 export { default as executiveViceChairPerson } from "../../assets/student-council/Exec. Vice Chairperson - Dimmie Eya Luces.jpg";
 export { default as bu } from "./bu-logo.png";
