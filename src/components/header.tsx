@@ -5,9 +5,41 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import React from "react";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import { CaretDownIcon } from "@radix-ui/react-icons";
 import { useStateContext } from "@/lib/state";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/accordion";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/navigation-menu";
+import { cn } from "@/lib/utils";
+
+const teams: { title: string; href: string; description: string | null }[] = [
+  {
+    title: "- Advocates",
+    href: "#advocates",
+    description: "",
+  },
+  {
+    title: "- Student Council",
+    href: "#student-council",
+    description: "",
+  },
+  {
+    title: "- Founders",
+    href: "#founders",
+    description: "",
+  },
+];
 
 const hiddenNavLink = ["Advocates", "Student Council", "Founders", "Partners"];
 
@@ -111,7 +143,7 @@ export default function Header() {
       </div>
 
       {/* Navigation links */}
-      <div className="items-center justify-between md:gap-6 lg:gap-10 hidden md:flex">
+      <div className="items-center justify-between md:gap-6 lg:gap-10  hidden md:flex">
         {siteConfig.links.map((link) =>
           hiddenNavLink.includes(link.title) ? (
             ""
@@ -125,92 +157,135 @@ export default function Header() {
             </Link>
           )
         )}
-        <NavigationMenu.Root className="relative  text-white items-center justify-center font-helvetica_light">
-          <NavigationMenu.List className="center m-0 flex list-none">
-            <NavigationMenu.Item>
-              <NavigationMenu.Trigger className="group flex select-none items-center justify-between text-[15px] leading-none outline-none">
-                <a
-                  href="#advocates"
-                  onClick={() => handleChangeNavLink("#advocates")}
-                >
-                  Advocates{" "}
-                </a>
-                <CaretDownIcon
-                  className="relative transition-transform duration-[200] ease-in group-data-[state=open]:-rotate-180"
-                  aria-hidden
-                />
-              </NavigationMenu.Trigger>
-              <NavigationMenu.Content className="absolute top-6 backdrop-blur-md rounded-sm shrink-0 ">
-                <ul className="flex flex-col gap-2 list-none ">
-                  <ListItem
-                    title="Student Council"
-                    href="#student-council"
-                    onClick={() => handleChangeNavLink("#student-council")}
-                  />
-                  <ListItem
-                    title="Founders"
-                    href="#founders"
-                    onClick={() => handleChangeNavLink("#founders")}
-                  />
+        <NavigationMenu className="text-white">
+          <NavigationMenuList className="space-x-4">
+            <NavigationMenuItem className="w-full">
+              <NavigationMenuTrigger>Team</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="flex flex-col shrink-0 flex-nowrap text-nowrap">
+                  {teams.map((team) => (
+                    <ListItem
+                      key={team.title}
+                      title={team.title}
+                      href={team.href}
+                      onClick={() => handleChangeNavLink(team.href)}
+                    />
+                  ))}
                 </ul>
-              </NavigationMenu.Content>
-            </NavigationMenu.Item>
-            <NavigationMenu.Indicator />
-          </NavigationMenu.List>
-          <NavigationMenu.Viewport />
-        </NavigationMenu.Root>
-        <Link
-          href="#partners"
-          key="#partners"
-          className="text-sm text-white font-helvetica_light"
-        >
-          Partners
-        </Link>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem className="rounded-md px-2 font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white text-center">
+              <Link
+                href={siteConfig.contacts.membership}
+                target="_blank"
+                legacyBehavior
+                passHref
+              >
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  Join Us Now
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
 
       {/* Mobile drawer */}
       {isDrawerOpen && (
-        <div className="md:hidden fixed backdrop-blur-lg transition-all rounded-b-lg w-full h-fit top-14 left-0">
+        <div className="md:hidden px-4 pt-4 fixed backdrop-blur-lg transition-all w-full h-svh top-14 left-0">
           {/* Render your navigation links here */}
-          <div className="flex flex-col items-center w-full h-fit">
-            {siteConfig.links.map((link) => (
-              <Link
-                onClick={() => setDrawerOpen(false)}
-                href={link.href}
-                key={link.href}
-                className="text-sm text-white font-helvetica_light mb-4"
-              >
-                {link.title}
-              </Link>
-            ))}
+          <div className="flex flex-col justify-between gap-4 w-full h-fit">
+            {siteConfig.links.map((link) =>
+              hiddenNavLink.includes(link.title) ? (
+                ""
+              ) : (
+                <Link
+                  href={link.href}
+                  key={link.href}
+                  className="text-sm text-white font-helvetica_light"
+                >
+                  {link.title}
+                </Link>
+              )
+            )}
+            <Accordion
+              type="single"
+              collapsible
+              className="text-white w-full items-center justify-center"
+            >
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="w-full justify-between">
+                  Team
+                </AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-4">
+                  <Link
+                    href="#advocates"
+                    key="#advocates"
+                    className="mt-4"
+                    onClick={() => handleChangeNavLink("#advocates")}
+                  >
+                    Advocates
+                  </Link>
+                  <Link
+                    href="#student-council"
+                    key="#student-council"
+                    onClick={() => handleChangeNavLink("#student-council")}
+                  >
+                    Student Council
+                  </Link>
+                  <Link
+                    href="#founders"
+                    key="#founders"
+                    onClick={() => handleChangeNavLink("#founders")}
+                  >
+                    Founders
+                  </Link>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            <Link
+              href="#partners"
+              key="#partners"
+              className="text-sm text-white font-helvetica_light"
+            >
+              Partners
+            </Link>
+            <a
+              href={siteConfig.contacts.membership}
+              target="_blank"
+              className="pt-[0.7rem] mb-4 pb-2 px-2 rounded-md font-helvetica_bold font-bold bg-[#6633CC] hover:bg-[#330066] focus:bg-[#330066] text-white text-center"
+            >
+              Join Us Now
+            </a>
           </div>
         </div>
       )}
     </header>
   );
 }
-interface ListItemProps {
-  className?: string;
-  children?: React.ReactNode;
-  title: string;
-  [key: string]: any; // Allows for additional properties
-}
 
-const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-  ({ className, children, title, ...props }, forwardedRef) => (
+const ListItem = React.forwardRef<
+  React.ElementRef<"a">,
+  React.ComponentPropsWithoutRef<"a">
+>(({ className, title, children, ...props }, ref) => {
+  return (
     <li>
-      <NavigationMenu.Link asChild>
+      <NavigationMenuLink asChild>
         <a
-          className={`block select-none rounded-[6px] text-[15px] leading-none hover:underline outline-none ${className}`}
+          ref={ref}
+          className={cn(
+            "block select-none space-y-1 rounded-md p-3 leading-none outline-none transition-colors hover:bg-[#330066] focus:bg-[#330066] ",
+            className
+          )}
           {...props}
-          ref={forwardedRef}
         >
-          <div>{title}</div>
-          <p className="leading-[1.4]">{children}</p>
+          <div className="text-sm font-medium leading-none">{title}</div>
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+            {children}
+          </p>
         </a>
-      </NavigationMenu.Link>
+      </NavigationMenuLink>
     </li>
-  )
-);
-
+  );
+});
 ListItem.displayName = "ListItem";
