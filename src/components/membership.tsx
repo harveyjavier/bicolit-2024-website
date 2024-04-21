@@ -44,7 +44,7 @@ export default function Membership() {
 
   return (
     <section
-      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-[#E8E2EE] text-black"
+      className="p-2 flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col h-full md:h-auto bg-[#E8E2EE] text-black"
       id="membership"
     >
       <div className="p-6">

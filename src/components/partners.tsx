@@ -54,7 +54,7 @@ export default function Partners() {
   };
   return (
     <section
-      className="container flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col gap-14 h-svg md:h-[45rem] bg-[#330066] text-white"
+      className="flex items-center justify-center px-4 py-6 md:px-24 md:py-20 flex-col gap-14 h-svg md:h-[45rem] bg-[#330066] text-white"
       id="partners"
     >
       <Image

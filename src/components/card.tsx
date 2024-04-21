@@ -1,12 +1,13 @@
 import React, { ReactNode } from "react";
 import Image from "next/image";
 import CardTitle from "@/components/card-title";
+import CardDescription from "./card-description";
 
 type CardProps = {
   imageSource: any;
   title: ReactNode;
   contentStyle?: string;
-  description: string;
+  description: ReactNode;
   cardClass?: string;
   imgGradient?: string;
   imageWidth?: number;
@@ -36,7 +37,7 @@ const Card: React.FC<CardProps> = ({
       </div>
       <div className={contentStyle}>
         <CardTitle>{title}</CardTitle>
-        <p className="text-sm">{description}</p>
+        <CardDescription>{description}</CardDescription>
       </div>
     </div>
   );

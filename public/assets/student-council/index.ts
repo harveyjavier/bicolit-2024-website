@@ -9,3 +9,6 @@ export { default as communityCoordinator } from "../../assets/student-council/Co
 export { default as membershipChair } from "../../assets/placeholder.svg";
 export { default as promotionsLead } from "../../assets/student-council/Promotions Lead_John Francis B. Lomeda.png";
 export { default as executiveViceChairPerson } from "../../assets/student-council/Exec. Vice Chairperson - Dimmie Eya Luces.jpg";
+export { default as bu } from "./bu-logo.png";
+export { default as dwcl } from "./dwcl-logo.png";
+export { default as cspc } from "./cspc-logo.png";

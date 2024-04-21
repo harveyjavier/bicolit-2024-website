@@ -4,10 +4,21 @@ import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import React from "react";
+import * as NavigationMenu from "@radix-ui/react-navigation-menu";
+import { CaretDownIcon } from "@radix-ui/react-icons";
+import { useStateContext } from "@/lib/state";
+
+const hiddenNavLink = ["Advocates", "Student Council", "Founders", "Partners"];
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const { setState } = useStateContext();
+
+  const handleChangeNavLink = (link: string) => {
+    setState((state: any) => ({ ...state, link }));
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +41,7 @@ export default function Header() {
     setDrawerOpen(!isDrawerOpen);
   };
 
-  const headerClass = `md:container sticky top-4 left-0 right-0 flex z-20 w-full justify-between items-center transition-all flex-row  ${
+  const headerClass = `sticky top-4 left-0 right-0 flex z-20 w-full justify-between items-center transition-all flex-row  ${
     scrolled ? "backdrop-blur-lg top-4 rounded-full" : "bg-none"
   } `;
 
@@ -101,15 +112,60 @@ export default function Header() {
 
       {/* Navigation links */}
       <div className="items-center justify-between md:gap-6 lg:gap-10 hidden md:flex">
-        {siteConfig.links.map((link) => (
-          <Link
-            href={link.href}
-            key={link.href}
-            className="text-sm text-white font-helvetica_light"
-          >
-            {link.title}
-          </Link>
-        ))}
+        {siteConfig.links.map((link) =>
+          hiddenNavLink.includes(link.title) ? (
+            ""
+          ) : (
+            <Link
+              href={link.href}
+              key={link.href}
+              className="text-sm text-white font-helvetica_light"
+            >
+              {link.title}
+            </Link>
+          )
+        )}
+        <NavigationMenu.Root className="relative  text-white items-center justify-center font-helvetica_light">
+          <NavigationMenu.List className="center m-0 flex list-none">
+            <NavigationMenu.Item>
+              <NavigationMenu.Trigger className="group flex select-none items-center justify-between text-[15px] leading-none outline-none">
+                <a
+                  href="#advocates"
+                  onClick={() => handleChangeNavLink("#advocates")}
+                >
+                  Advocates{" "}
+                </a>
+                <CaretDownIcon
+                  className="relative transition-transform duration-[200] ease-in group-data-[state=open]:-rotate-180"
+                  aria-hidden
+                />
+              </NavigationMenu.Trigger>
+              <NavigationMenu.Content className="absolute top-6 backdrop-blur-md rounded-sm shrink-0 ">
+                <ul className="flex flex-col gap-2 list-none ">
+                  <ListItem
+                    title="Student Council"
+                    href="#student-council"
+                    onClick={() => handleChangeNavLink("#student-council")}
+                  />
+                  <ListItem
+                    title="Founders"
+                    href="#founders"
+                    onClick={() => handleChangeNavLink("#founders")}
+                  />
+                </ul>
+              </NavigationMenu.Content>
+            </NavigationMenu.Item>
+            <NavigationMenu.Indicator />
+          </NavigationMenu.List>
+          <NavigationMenu.Viewport />
+        </NavigationMenu.Root>
+        <Link
+          href="#partners"
+          key="#partners"
+          className="text-sm text-white font-helvetica_light"
+        >
+          Partners
+        </Link>
       </div>
 
       {/* Mobile drawer */}
@@ -133,3 +189,28 @@ export default function Header() {
     </header>
   );
 }
+interface ListItemProps {
+  className?: string;
+  children?: React.ReactNode;
+  title: string;
+  [key: string]: any; // Allows for additional properties
+}
+
+const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
+  ({ className, children, title, ...props }, forwardedRef) => (
+    <li>
+      <NavigationMenu.Link asChild>
+        <a
+          className={`block select-none rounded-[6px] text-[15px] leading-none hover:underline outline-none ${className}`}
+          {...props}
+          ref={forwardedRef}
+        >
+          <div>{title}</div>
+          <p className="leading-[1.4]">{children}</p>
+        </a>
+      </NavigationMenu.Link>
+    </li>
+  )
+);
+
+ListItem.displayName = "ListItem";
