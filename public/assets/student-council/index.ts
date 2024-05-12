@@ -12,3 +12,4 @@ export { default as executiveViceChairPerson } from "../../assets/student-counci
 export { default as bu } from "./bu-logo.png";
 export { default as dwcl } from "./dwcl-logo.png";
 export { default as cspc } from "./cspc-logo.png";
+export { default as adnu } from "./adnu-logo.png";

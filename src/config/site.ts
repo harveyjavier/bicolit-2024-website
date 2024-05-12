@@ -3,7 +3,7 @@ import ogImage from "../../public/og.png";
 import facebook from "../../public/assets/partners/facebook.svg";
 import instagram from "../../public/assets/partners/ig.svg";
 import x from "../../public/assets/partners/x.svg";
-import { bu, dwcl, cspc } from "../../public/assets/student-council";
+import { bu, dwcl, cspc, adnu } from "../../public/assets/student-council";
 import {
   president,
   headOfCreatives,
@@ -129,12 +129,12 @@ export const siteConfig = {
     },
     {
       imageSource: executiveViceChairPerson,
-      school: "Camarines Sur Polytechnic Colleges",
+      school: "Ateneo De Naga University",
       name: "Dimmie Eya Luces",
       linkedin: "",
       position: "Executive Vice Chairperson",
-      schoolLogo: cspc,
-      schoolSite: "https://cspc.edu.ph",
+      schoolLogo: adnu,
+      schoolSite: "https://www.adnu.edu.ph/",
     },
     {
       imageSource: studentSecretary,
