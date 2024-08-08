@@ -1,7 +1,7 @@
 import Image from "next/image";
-import graphicFour from "../../public/assets/events/graphic_4.svg";
-import graphicFive from "../../public/assets/events/graphic_5.svg";
-import thumnail from "../../public/assets/vid-thumbnail.png";
+import graphicFour from "@/assets/events/graphic_4.svg";
+import graphicFive from "@/assets/events/graphic_5.svg";
+import thumnail from "@/assets/vid-thumbnail.png";
 
 export default function Events() {
   return (
