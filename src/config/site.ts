@@ -30,7 +30,7 @@ import {
   DWCLLogo,
   STICLogo,
   SLTCFILogo,
-} from "@/assets/student-council/school-logo";
+} from "@/assets/logo/school-logo";
 import {
   founderHarris,
   founderRico,

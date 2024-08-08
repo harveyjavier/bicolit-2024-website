@@ -7,7 +7,7 @@ export default function About() {
       className="relative -z-10 container px-4 h-full md:h-[50rem] flex items-start justify-center pt-14 gap-10 pb-32"
       id="about"
     >
-      <h2 dir="rtl" className="font-bold  text-xl leading-5 ">
+      <h2 dir="rtl" className="font-bold  text-xl leading-8">
         We&lsquo;re the biggest and most
         <br /> active IT education advocacy organization in the Bicol region
         with 5k&#43; members
