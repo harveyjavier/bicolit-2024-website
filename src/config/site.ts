@@ -1,9 +1,8 @@
 import logo from "../../public/bicolit-logo.svg";
 import ogImage from "../../public/og.png";
-import facebook from "../../public/assets/partners/facebook.svg";
-import instagram from "../../public/assets/partners/ig.svg";
-import x from "../../public/assets/partners/x.svg";
-import { bu, dwcl, cspc, adnu } from "../../public/assets/student-council";
+import facebook from "@/assets/partners/facebook.svg";
+import instagram from "@/assets/partners/ig.svg";
+import x from "@/assets/partners/x.svg";
 import {
   president,
   headOfCreatives,
@@ -11,27 +10,35 @@ import {
   headOfPartnershipAndRelations,
   financeOfficer,
   boardMember,
-} from "../../public/assets/advocates";
+} from "@/assets/advocates";
 import {
-  councilPresident,
-  externalRelationsOfficer,
-  studentFinaceOfficer,
-  eventCoordinator,
-  technologyOfficer,
-  communityCoordinator,
-  studentSecretary,
-  promotionsLead,
-  membershipChair,
-  executiveViceChairPerson,
-} from "../../public/assets/student-council/";
-
+  PeterJohn,
+  Kenneth,
+  KadmielRoss,
+  Renmar,
+  Olan,
+  Cyril,
+  JohnFrancis,
+  Dimmie,
+  Sean,
+  PaulDannielle,
+} from "@/assets/student-council";
+import {
+  BULogo,
+  ADNULogo,
+  CSPCLogo,
+  DWCLLogo,
+  STICLogo,
+  SLTCFILogo,
+} from "@/assets/student-council/school-logo";
 import {
   founderHarris,
   founderRico,
   founderRichardGonzales,
   founderRichardNacar,
   founderJason,
-} from "../../public/assets/founders";
+} from "../assets/founders";
+import placeholder from "@/assets/placeholder.svg";
 
 export const siteConfig = {
   name: "Bicol IT",
@@ -119,100 +126,91 @@ export const siteConfig = {
   ],
   studentCouncil: [
     {
-      imageSource: councilPresident,
-      school: "Bicol University",
-      name: "Kenneth Aycardo",
+      imageSource: Cyril,
+      school: "Camarines Sur Polytechnic Colleges",
+      name: "Cyril Christian B. Imperial",
       linkedin: "",
       position: "President",
-      schoolLogo: bu,
-      schoolSite: "https://www.bicol-u.edu.ph/",
-    },
-    {
-      imageSource: executiveViceChairPerson,
-      school: "Ateneo De Naga University",
-      name: "Dimmie Eya Luces",
-      linkedin: "",
-      position: "Executive Vice Chairperson",
-      schoolLogo: adnu,
-      schoolSite: "https://www.adnu.edu.ph/",
-    },
-    {
-      imageSource: studentSecretary,
-      school: "Bicol University",
-      name: "Olan Gomez",
-      linkedin: "",
-      position: "Secretary",
-      schoolLogo: bu,
-      schoolSite: "https://www.bicol-u.edu.ph/",
-    },
-    {
-      imageSource: membershipChair,
-      school: "Bicol University",
-      name: "Renmar Balana",
-      linkedin: "",
-      position: "Membership Chair",
-      schoolLogo: bu,
-      schoolSite: "https://www.bicol-u.edu.ph/",
-    },
-    {
-      imageSource: externalRelationsOfficer,
-      school: "Bicol University",
-      name: "Sean Jethro A. Palacay",
-      linkedin: "",
-      position: "External Relations Officer",
-      schoolLogo: bu,
-      schoolSite: "https://www.bicol-u.edu.ph/",
-    },
-    {
-      imageSource: promotionsLead,
-      school: "Camarines Sur Polytechnic Colleges",
-      name: "John Francis Lomeda",
-      linkedin: "",
-      position: "Promotions Lead",
-      schoolLogo: cspc,
+      schoolLogo: CSPCLogo,
       schoolSite: "https://cspc.edu.ph",
     },
     {
-      imageSource: studentFinaceOfficer,
+      imageSource: Dimmie,
+      school: "Ateneo De Naga University",
+      name: "Dimmie Eya Luces",
+      linkedin: "",
+      position: "Vice President",
+      schoolLogo: ADNULogo,
+      schoolSite: "https://www.adnu.edu.ph/",
+    },
+    {
+      imageSource: placeholder,
+      school: "SLTCFI Legazpi",
+      name: "Clarissa B. Vega",
+      linkedin: "",
+      position: "Secretary",
+      schoolLogo: SLTCFILogo,
+      schoolSite: "https://sltcfi.com",
+    },
+    {
+      imageSource: PaulDannielle,
       school: "STI College Legazpi",
       name: "Paul Dannielle P. Yanzon",
       linkedin: "",
       position: "Finance Officer",
-      schoolLogo: "",
-      schoolSite: "https://sti.edu/campuses-details.asp?campus_id=TEVH",
+      schoolLogo: STICLogo,
+      schoolSite: "https://sti.edu/",
     },
     {
-      imageSource: eventCoordinator,
-      school: "Camarinse Sur Polytechnic Colleges",
-      name: "Cyril Christian B. Imperial",
+      imageSource: placeholder,
+      school: "Bicol University",
+      name: "Paraiso Jhoanna Sherry",
       linkedin: "",
-      position: "Event Coordinator",
-      schoolLogo: cspc,
-      schoolSite: "https://cspc.edu.ph",
+      position: "Events Lead",
+      schoolLogo: BULogo,
+      schoolSite: "https://www.bicol-u.edu.ph/",
     },
     {
-      imageSource: communityCoordinator,
+      imageSource: placeholder,
+      school: "Bicol University",
+      name: "Yunise Ellaine Madriñan",
+      linkedin: "",
+      position: "Marketing Lead",
+      schoolLogo: BULogo,
+      schoolSite: "https://www.bicol-u.edu.ph/",
+    },
+    {
+      imageSource: KadmielRoss,
       school: "Divine Word College of Legazpi",
       name: "Kadmiel Ross B. Baiño",
       linkedin: "",
-      position: "Community Coordinator",
-      schoolLogo: dwcl,
+      position: "Growth Lead",
+      schoolLogo: DWCLLogo,
       schoolSite: "https://www.dwc-legazpi.edu",
     },
     {
-      imageSource: technologyOfficer,
+      imageSource: JohnFrancis,
+      school: "Camarines Sur Polytechnic Colleges",
+      name: "John Francis Lomeda",
+      linkedin: "",
+      position: "Creative Lead",
+      schoolLogo: CSPCLogo,
+      schoolSite: "https://cspc.edu.ph",
+    },
+    {
+      imageSource: PeterJohn,
       school: "STI College Legazpi",
       name: "Peter John Arao",
       linkedin: "https://www.linkedin.com/in/peter-john-arao/",
-      position: "Technology Officer",
-      schoolLogo: "",
-      schoolSite: "https://sti.edu/campuses-details.asp?campus_id=TEVH",
+      position: "Tech Lead",
+      schoolLogo: STICLogo,
+      schoolSite: "https://sti.edu/",
     },
   ],
   founders: [
     {
       imageSource: founderHarris,
-      name: "Harris Rainer",
+      name: "Harris Rainier",
       linkedin: "https://www.linkedin.com/in/ohrainier",
       position: "Founder",
     },
