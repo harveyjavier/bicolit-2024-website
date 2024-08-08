@@ -1,5 +1,5 @@
 import Image from "next/image";
-import graphicTwo from "../../public/assets/about/graphic_2.svg";
+import graphicTwo from "@/assets/about/graphic_2.svg";
 
 export default function About() {
   return (
