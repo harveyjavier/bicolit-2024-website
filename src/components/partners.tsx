@@ -46,11 +46,7 @@ export default function Partners() {
         />
       ),
     });
-    formData.delete("first_name");
-    formData.delete("last_name");
-    formData.delete("email");
-    formData.delete("mobile_number");
-    formData.delete("message");
+    formData.forEach((_, key) => formData.delete(key));
   };
   return (
     <section
