@@ -1,0 +1,10 @@
+export { default as PeterJohn } from "./arao.png";
+export { default as Kenneth } from "./aycardo.jpg";
+export { default as KadmielRoss } from "./baiño.jpg";
+export { default as Renmar } from "./balana.jpg";
+export { default as Olan } from "./gomez.jpg";
+export { default as Cyril } from "./imperial.png";
+export { default as JohnFrancis } from "./lomeda.png";
+export { default as Dimmie } from "./luces.jpg";
+export { default as Sean } from "./palacay.png";
+export { default as PaulDannielle } from "./yanzon.jpg";
