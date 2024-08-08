@@ -1,4 +1,4 @@
-export { default as PeterJohn } from "./arao.png";
+export { default as PeterJohn } from "./arao.jpg";
 export { default as Kenneth } from "./aycardo.jpg";
 export { default as KadmielRoss } from "./baiño.jpg";
 export { default as Renmar } from "./balana.jpg";
