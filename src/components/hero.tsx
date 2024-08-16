@@ -1,6 +1,6 @@
 import Image from "next/image";
-import vrGirl from "../../public/assets/hero/vr-girl.png";
-import graphicOne from "../../public/assets/hero/graphic_1.svg";
+import vrGirl from "@/assets/hero/vr-girl.png";
+import graphicOne from "@/assets/hero/graphic_1.svg";
 
 export default function Hero() {
   return (

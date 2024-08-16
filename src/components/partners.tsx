@@ -46,11 +46,7 @@ export default function Partners() {
         />
       ),
     });
-    formData.delete("first_name");
-    formData.delete("last_name");
-    formData.delete("email");
-    formData.delete("mobile_number");
-    formData.delete("message");
+    formData.forEach((_, key) => formData.delete(key));
   };
   return (
     <section
@@ -69,16 +65,16 @@ export default function Partners() {
           <span className="font-helvetica_bold text-xl font-extrabold text-white">
             Contact Us
           </span>
-          <div className="flex items-start justify-between flex-col gap-10">
-            <div className="space-y-6">
+          <div className="flex items-start justify-between flex-col gap-6">
+            <div className="space-y-4">
               {siteConfig.contacts.info.map((contact, index) => {
                 return (
                   <div
                     key={index}
-                    className="flex items-start justify-between w-full h-full text-sm"
+                    className="flex items-start lg:justify-between w-full h-full text-sm"
                   >
-                    <span>{contact.key}:</span>
-                    <span className="text-right">{contact.value}</span>
+                    <span className="mr-2">{contact.key}:</span>
+                    <span className="lg:text-right">{contact.value}</span>
                   </div>
                 );
               })}

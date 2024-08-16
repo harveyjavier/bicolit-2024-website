@@ -1,7 +1,7 @@
 import Card from "@/components/card";
 import { siteConfig } from "@/config/site";
-import AdvocateTitle from "./advocate-title";
-import linkedinIcon from "../../public/assets/In-Blue-128.png";
+import AdvocateTitle from "@/components/advocate-title";
+import { LinkedInLogo } from "@/assets/logo";
 import Image from "next/image";
 
 export default function StudentCouncil() {
@@ -21,7 +21,7 @@ export default function StudentCouncil() {
             <AdvocateTitle
               title={student.name}
               url={student.linkedin}
-              icon={linkedinIcon}
+              icon={LinkedInLogo}
             />
           }
           description={
